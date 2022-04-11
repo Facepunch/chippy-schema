@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/patterndata.json",
+  "title": "SpaceUsurper.PatternData",
+  "description": "",
   "type": "object",
   "properties": {
     "properties": {
@@ -22,7 +24,8 @@
       ]
     },
     "onCharge": {
-      "$ref": "/chippy-schema/schemas/actionlist.json"
+      "$ref": "/chippy-schema/schemas/actionlist.json",
+      "description": "Called by PixelGroup, not BulletPattern - you have access to pixelgroup params, not pattern params."
     },
     "onStart": {
       "$ref": "/chippy-schema/schemas/actionlist.json"
@@ -31,7 +34,8 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "onBullet": {
-      "$ref": "/chippy-schema/schemas/actionlist.json"
+      "$ref": "/chippy-schema/schemas/actionlist.json",
+      "description": "Called only once per bullet group in a volley (can contain multiple subdivided bullets)."
     },
     "onFinish": {
       "$ref": "/chippy-schema/schemas/actionlist.json"
@@ -40,7 +44,8 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "onEachBullet": {
-      "$ref": "/chippy-schema/schemas/actionlist.json"
+      "$ref": "/chippy-schema/schemas/actionlist.json",
+      "description": "Called whenever the pattern creates a new bullet, set to 'currentBullet' property."
     },
     "#include": {
       "type": "array",
@@ -72,7 +77,8 @@
             "$ref": "/chippy-schema/schemas/bulletdata.json"
           }
         ]
-      }
+      },
+      "description": "The paths of the different bullets used in the pattern."
     },
     "bulletIndex": {
       "anyOf": [
@@ -82,7 +88,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "Decides which bullet is used for a given shot."
     },
     "shouldOverrideStatusEffect": {
       "anyOf": [
@@ -92,7 +99,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Decides if the current bullet should be overridden with a status effect."
     },
     "statusPaths": {
       "type": "array",
@@ -105,7 +113,8 @@
             "$ref": "/chippy-schema/schemas/statuseffectdata.json"
           }
         ]
-      }
+      },
+      "description": "The status effects that can be used to override."
     },
     "statusLevel": {
       "anyOf": [
@@ -115,7 +124,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "The amount of status levels to add. Takes precedence over BulletData.statusLevel."
     },
     "shouldUseSingleStatusEffect": {
       "anyOf": [
@@ -125,7 +135,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Set to true to select from statusPaths instead of assigning all to cycling status bullet."
     },
     "statusIndex": {
       "anyOf": [
@@ -135,7 +146,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "Which status from statusPaths to use."
     },
     "patternShape": {
       "anyOf": [
@@ -145,7 +157,8 @@
         {
           "$ref": "/chippy-schema/schemas/patternshape.json"
         }
-      ]
+      ],
+      "description": "Spokes: spread bullets out along the arc angle (default = full circle), Custom: specify the position and angle of each bullet."
     },
     "numVolleys": {
       "anyOf": [
@@ -155,7 +168,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "The number of volleys to shoot before finishing. If 0, don't stop until the parent tells it to."
     },
     "shootDelay": {
       "anyOf": [
@@ -165,7 +179,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "The amount of time each volley (after the first) will be delayed from the previous volley."
     },
     "startDelay": {
       "anyOf": [
@@ -175,7 +190,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "The amount of time the first volley will be delayed."
     },
     "shouldShoot": {
       "anyOf": [
@@ -185,7 +201,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Whether the current bullet that will be shot, should actually be shot or not (defaults to true)."
     },
     "numBulletsInVolley": {
       "anyOf": [
@@ -205,7 +222,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "What angle to spread spokes over (when 0 or 360, use the whole circle)."
     },
     "arcEasingType": {
       "anyOf": [
@@ -215,7 +233,8 @@
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
         }
-      ]
+      ],
+      "description": "How the bullets in an arc are laid out."
     },
     "fanSubdivide": {
       "anyOf": [
@@ -225,7 +244,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "Number of fan bullets each 'spoke' should have."
     },
     "fanAngle": {
       "anyOf": [
@@ -235,7 +255,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Degrees between each bullet, only used for fan pattern shape (defaults to 30f)."
     },
     "parallelSubdivide": {
       "anyOf": [
@@ -245,7 +266,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "Number of parallel bullets each 'spoke' should have."
     },
     "parallelForce": {
       "anyOf": [
@@ -255,7 +277,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Sideways force to spread out bullets that head in the same direction, only used for parallel pattern shape (applies impulse force to bullets)."
     },
     "parallelSpread": {
       "anyOf": [
@@ -265,7 +288,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Sideways spread for bullets that head in the same direction, only used for parallel pattern shape."
     },
     "startAngle": {
       "anyOf": [
@@ -275,7 +299,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "If set, overrides default or target starting angle."
     },
     "angleOffset": {
       "anyOf": [
@@ -285,7 +310,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Amount of degrees to offset current bullet's angle."
     },
     "positionOffset": {
       "anyOf": [
@@ -295,7 +321,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "Amount to offset current bullet's position."
     },
     "velocity": {
       "anyOf": [
@@ -305,7 +332,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "Amount to add to bullet's starting velocity."
     },
     "impulseVelocity": {
       "anyOf": [
@@ -315,7 +343,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "Amount to add to bullet's starting impulse velocity."
     },
     "bulletSizeMultiplier": {
       "anyOf": [
@@ -325,7 +354,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Amount to scale each bullet's size by."
     },
     "bulletVelocityMultiplier": {
       "anyOf": [
@@ -335,7 +365,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Amount to scale each bullet's velocity by."
     },
     "bulletLifetimeMultiplier": {
       "anyOf": [
@@ -345,7 +376,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Amount to scale each bullet's lifetime by."
     },
     "shootDelayMultiplier": {
       "anyOf": [
@@ -355,7 +387,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Amount to scale the pattern's shootDelay by."
     },
     "numVolleysAddition": {
       "anyOf": [
@@ -365,7 +398,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "Number of volleys to add or subtract."
     },
     "numBulletsAddition": {
       "anyOf": [
@@ -375,7 +409,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "Number of bullets to add or subtract from each volley."
     },
     "customPatternPos": {
       "anyOf": [
@@ -385,7 +420,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "The position of the pattern for the current volley, for a custom pattern."
     },
     "customBulletPos": {
       "anyOf": [
@@ -395,7 +431,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "The position of a given bullet in an custom pattern."
     },
     "customBulletAngle": {
       "anyOf": [
@@ -405,7 +442,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "The angle of a given bullet in an custom pattern."
     },
     "recoil": {
       "anyOf": [
@@ -415,7 +453,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "Force that's applied to the player/unit for each volley. Only applies when Player.AddPattern is called, not for patterns fired from player guns. \"shoot_force\" physics element must be defined."
     },
     "torque": {
       "anyOf": [
@@ -425,7 +464,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "Rotation force applied to units."
     },
     "vibrationStrength": {
       "anyOf": [
@@ -435,7 +475,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Amount to vibrate at position of pattern, each volley."
     },
     "maxVibrationDist": {
       "anyOf": [
@@ -525,7 +566,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, handle rotation every update, instead of only when firing a volley."
     },
     "useRawDeltaTime": {
       "anyOf": [
@@ -535,7 +577,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Ignore time-scaling."
     },
     "dragBullets": {
       "anyOf": [
@@ -545,7 +588,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Whether bullets of this pattern move with the pattern itself in addition to their own movement."
     },
     "rotateBullets": {
       "anyOf": [
@@ -555,7 +599,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Whether the rotation of this pattern modifies the position of child bullets."
     },
     "rotateBulletAngles": {
       "anyOf": [
@@ -565,7 +610,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If false, only rotates the position of anchored bullets, not their orientation."
     },
     "rotateWithAnchor": {
       "anyOf": [
@@ -575,7 +621,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Whether rotation applied to the anchor affects this pattern's rotation."
     },
     "useAnchorPos": {
       "anyOf": [
@@ -585,7 +632,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, pattern position is continuously set to anchor position (defaults to true)."
     },
     "inheritAnchorAngle": {
       "anyOf": [
@@ -595,7 +643,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Whether this pattern's angle is set to anchor angle, when attached."
     },
     "waitForBulletsToDespawn": {
       "anyOf": [
@@ -605,7 +654,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, wait for all fired bullets to despawn before removing pattern, else only wait until all have been fired."
     },
     "despawnChildBulletsWhenFinished": {
       "anyOf": [
@@ -615,7 +665,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, remove all bullets we've fired when we finish for any reason."
     },
     "despawnWhenAnchorInactive": {
       "anyOf": [
@@ -625,7 +676,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, remove pattern if the anchor doesn't exist any longer (defaults to true)."
     },
     "attachChildBulletsToBulletAnchor": {
       "anyOf": [
@@ -635,10 +687,12 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, bullets in this pattern will have their parent bullet set to this pattern's bullet anchor, if it exists."
     },
     "changeTargetPlayerOnDeath": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "In co-op, should this pattern pick a new target player if the old target dies."
     },
     "autoUpdateTargetPlayer": {
       "type": "boolean"
@@ -766,7 +820,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How far the pattern's anchor core looks in the aim direction while charging."
     },
     "chargeLookLerpPercent": {
       "anyOf": [
@@ -776,7 +831,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How quickly the pattern's anchor core looks in the aim direction while charging."
     },
     "shootTime": {
       "anyOf": [
@@ -786,7 +842,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How long each shot volley affects the core."
     },
     "shootLookPercent": {
       "anyOf": [
@@ -796,7 +853,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How far the pattern's anchor core looks in the aim direction each volley."
     },
     "shootLookLerpPercent": {
       "anyOf": [
@@ -806,7 +864,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How quickly the pattern's anchor core looks in the aim direction each volley."
     },
     "shootFinishLookTime": {
       "anyOf": [
@@ -816,7 +875,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How long to stay looking in the aim direction after shooting all volleys."
     },
     "kickbackTime": {
       "anyOf": [
@@ -826,7 +886,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How long the kickback lasts for."
     },
     "kickbackPercent": {
       "anyOf": [
@@ -836,7 +897,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How far in the reverse direction the shootLookPercent is adjusted each volley."
     },
     "kickbackLerpPercent": {
       "anyOf": [
@@ -846,7 +908,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How fast the kickback lerps."
     },
     "numVolleysPerShootSfx": {
       "anyOf": [
@@ -856,9 +919,12 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "How many volleys have to happen before playing each shoot sfx."
     },
-    "shootEffectPattern": {},
+    "shootEffectPattern": {
+      "description": "The bulletpattern that is fired whenever a volley is shot."
+    },
     "hitSelfPixels": {
       "anyOf": [
         {
@@ -867,7 +933,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, bullets in this pattern can collide with the same pxc that spawned it."
     },
     "linkVolleyBullets": {
       "anyOf": [
@@ -877,7 +944,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, all bullets in a volley will despawn if any of them despawn."
     },
     "advanceImmediately": {
       "anyOf": [
@@ -887,13 +955,15 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, update the bullet pattern immediately (shoot first volley, so subsequent actions can affect its bullets)."
     },
     "ignoreCollision": {
       "type": "array",
       "items": {
         "type": "string"
-      }
+      },
+      "description": "Units that this pattern should ignore collision with."
     },
     "debugVector": {
       "anyOf": [

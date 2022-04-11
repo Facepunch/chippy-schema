@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitformdata.json",
+  "title": "SpaceUsurper.UnitFormData",
+  "description": "",
   "type": "object",
   "properties": {
     "moveMode": {
@@ -323,7 +325,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "The size at the start of the spawn, that lerps to spawnScale."
     },
     "fadeInTime": {
       "anyOf": [
@@ -544,7 +547,8 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "onPartDestroyed": {
-      "$ref": "/chippy-schema/schemas/actionlist.json"
+      "$ref": "/chippy-schema/schemas/actionlist.json",
+      "description": "Called before PixelGroup.OnDestroy"
     },
     "onImplodeStart": {
       "$ref": "/chippy-schema/schemas/actionlist.json"
@@ -593,7 +597,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, always target whichever player is closest (defaults to false)."
     },
     "targetPlayerUpdatePeriod": {
       "anyOf": [
@@ -616,7 +621,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, unit can change targets while charging a pattern (defaults to false)."
     },
     "onHitPlayer": {
       "$ref": "/chippy-schema/schemas/actionlist.json"

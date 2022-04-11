@@ -1,4 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/chippy-schema/schemas/fsmaction.json"
+  "$id": "/chippy-schema/schemas/fsmaction.json",
+  "title": "SpaceUsurper.FsmAction",
+  "description": "Base type for all actions that can be included in an SpaceUsurper.ActionList. These are used to execute behaviors in FSM states, and to implement callbacks."
 }

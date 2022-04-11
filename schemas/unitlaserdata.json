@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitlaserdata.json",
+  "title": "SpaceUsurper.UnitLaserData",
+  "description": "",
   "type": "object",
   "properties": {
     "dps": {

@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/stagedata.json",
+  "title": "SpaceUsurper.StageData",
+  "description": "",
   "type": "object",
   "properties": {
     "loadingTips": {
@@ -110,7 +112,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector4.json"
         }
-      ]
+      ],
+      "description": "If this stage is currently using , controls how much space should be visible to the left, bottom, right and top of the stage bounds."
     },
     "units": {
       "type": "object",
@@ -162,7 +165,8 @@
       ]
     },
     "enableBulletArchetypes": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "If true, use ECS-based bullets where possible."
     },
     "continueWithStage": {
       "anyOf": [
@@ -196,7 +200,8 @@
         {
           "type": "string"
         }
-      ]
+      ],
+      "description": "All patterns display this debug text."
     }
   }
 }

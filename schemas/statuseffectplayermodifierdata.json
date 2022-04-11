@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/statuseffectplayermodifierdata.json",
+  "title": "SpaceUsurper.StatusEffectPlayerModifierData",
+  "description": "",
   "type": "object",
   "properties": {
     "moveSpeedMultiplier": {
@@ -11,7 +13,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Affects normal velocity and physics forces.///"
     },
     "moveSpeedMultiplierX": {
       "anyOf": [
@@ -81,7 +84,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Affects only default velocity, not physics forces."
     },
     "reverseInputPercent": {
       "anyOf": [
@@ -101,7 +105,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Multiplied with the Player's bulletPushPercent property."
     },
     "bulletHitboxLeniency": {
       "anyOf": [
@@ -111,7 +116,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Multiplied with the Player's bulletHitboxLeniency property."
     },
     "damageAmount": {
       "anyOf": [
@@ -131,7 +137,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Ignore collision with bullets, pixels, and lasers.///"
     },
     "ignoreBulletDamage": {
       "anyOf": [
@@ -201,7 +208,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Affects how quickly the player's gun moves to its target angle.///"
     },
     "gunTargetAngleAmount": {
       "anyOf": [
@@ -211,7 +219,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Adds to the player guns' target facing angle.///"
     },
     "threatMultiplier": {
       "anyOf": [

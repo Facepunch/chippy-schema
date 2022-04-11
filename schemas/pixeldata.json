@@ -1,4 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/chippy-schema/schemas/pixeldata.json"
+  "$id": "/chippy-schema/schemas/pixeldata.json",
+  "title": "SpaceUsurper.PixelData",
+  "description": ""
 }

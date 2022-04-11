@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitrepulsioncircledata.json",
+  "title": "SpaceUsurper.UnitRepulsionCircleData",
+  "description": "",
   "type": "object",
   "properties": {
     "offset": {

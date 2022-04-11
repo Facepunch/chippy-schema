@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/datapath.json",
+  "title": "SpaceUsurper.DataPath",
+  "description": "",
   "type": "string",
   "pattern": "^([a-zA-Z0-9_]+(\\/[a-zA-Z0-9_]+)*)?(\\.[a-zA-Z0-9_]+(\\.[a-zA-Z0-9_]+|\\[[0-9]+\\])*)?$"
 }

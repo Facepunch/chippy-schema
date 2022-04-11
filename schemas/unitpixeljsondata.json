@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitpixeljsondata.json",
+  "title": "SpaceUsurper.UnitPixelJsonData",
+  "description": "",
   "type": "object",
   "properties": {
     "ranges": {
@@ -202,7 +204,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Threat buildup per unit damage. Default:"
     },
     "#include": {
       "type": "array",

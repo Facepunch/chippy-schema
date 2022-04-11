@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/actionlist.json",
+  "title": "SpaceUsurper.ActionList",
+  "description": "List of SpaceUsurper.FsmActions, used by FSM states to specify a sequence of actions to perform when the state is entered. Also used to specify actions to execute in callbacks.",
   "type": "array",
   "items": {
     "$ref": "/chippy-schema/schemas/fsmaction.json"

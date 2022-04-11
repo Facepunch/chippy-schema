@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitmovementdata.json",
+  "title": "SpaceUsurper.UnitMovementData",
+  "description": "",
   "type": "object",
   "properties": {
     "acceleration": {

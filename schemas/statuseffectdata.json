@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/statuseffectdata.json",
+  "title": "SpaceUsurper.StatusEffectData",
+  "description": "",
   "type": "object",
   "properties": {
     "category": {
@@ -155,7 +157,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Highest priority shield-items are used first."
     },
     "numLevels": {
       "anyOf": [
@@ -165,7 +168,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "When preventing death on a bullet collision, should the bullet be despawned."
     },
     "replacesMainGun": {
       "type": "boolean"

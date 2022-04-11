@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitpartdata.json",
+  "title": "SpaceUsurper.UnitPartData",
+  "description": "",
   "type": "object",
   "properties": {
     "corePath": {
@@ -210,7 +212,8 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "onDestroy": {
-      "$ref": "/chippy-schema/schemas/actionlist.json"
+      "$ref": "/chippy-schema/schemas/actionlist.json",
+      "description": "This won't be called on cores for units that use Implode. Called after Unit.OnPartDestroyed"
     },
     "requires": {
       "type": "array",
@@ -324,7 +327,8 @@
       ]
     },
     "dontReactWhenHit": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Set to false if you'd rather call PixelGroup.React() manually."
     },
     "ropeOpacityNormal": {
       "anyOf": [
@@ -644,7 +648,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Threat buildup per unit damage. Default:"
     },
     "#include": {
       "type": "array",

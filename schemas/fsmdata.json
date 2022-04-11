@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/fsmdata.json",
+  "title": "SpaceUsurper.FsmData",
+  "description": "",
   "type": "object",
   "properties": {
     "#include": {

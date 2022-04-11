@@ -1,4 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/chippy-schema/schemas/unitanimdata.json"
+  "$id": "/chippy-schema/schemas/unitanimdata.json",
+  "title": "SpaceUsurper.UnitAnimData",
+  "description": ""
 }

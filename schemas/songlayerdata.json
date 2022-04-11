@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/songlayerdata.json",
+  "title": "SpaceUsurper.SongLayerData",
+  "description": "",
   "type": "object",
   "properties": {
     "segments": {

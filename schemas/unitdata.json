@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitdata.json",
+  "title": "SpaceUsurper.UnitData",
+  "description": "",
   "type": "object",
   "properties": {
     "PerformanceCategory": {
@@ -89,7 +91,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, parts don't stop active patterns when they are destroyed/removed (defaults to false)."
     },
     "dontStopPatternsOnImplode": {
       "anyOf": [
@@ -99,7 +102,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, unit doesn't stop patterns when it implodes (defaults to false)."
     },
     "opacityLerpSpeed": {
       "anyOf": [
@@ -327,7 +331,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Only for old replay support."
     }
   }
 }

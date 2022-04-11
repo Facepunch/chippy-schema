@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/pxcsourcedata.json",
+  "title": "SpaceUsurper.PxcSourceData",
+  "description": "",
   "type": "object",
   "properties": {
     "#include": {

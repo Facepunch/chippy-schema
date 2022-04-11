@@ -1,10 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/bulletdata.json",
+  "title": "SpaceUsurper.BulletData",
+  "description": "",
   "type": "object",
   "properties": {
     "disableBulletArchetypeGeneration": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Don't try to generate a BulletArchetype class for this bullet type."
     },
     "onStart": {
       "$ref": "/chippy-schema/schemas/actionlist.json"
@@ -105,7 +108,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, bullet despawns as soon as it runs out of keyframes, regardless of its lifetime."
     },
     "sfxHitPlayer": {
       "$ref": "/chippy-schema/schemas/sfxident.json"
@@ -141,7 +145,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How well the bullet resists being repelled (if unset, it defaults to 1)."
     },
     "anchored": {
       "anyOf": [
@@ -151,7 +156,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Set this to true if something else moves this bullet (eg. parent pattern)."
     },
     "shouldOverrideStatusEffect": {
       "anyOf": [
@@ -161,7 +167,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Decides if the current bullet should be overridden with a status effect."
     },
     "statusPaths": {
       "type": "array",
@@ -174,7 +181,8 @@
             "$ref": "/chippy-schema/schemas/statuseffectdata.json"
           }
         ]
-      }
+      },
+      "description": "The status effects that can be used to override."
     },
     "statusLevel": {
       "anyOf": [
@@ -184,7 +192,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "The amount of status levels to add."
     },
     "statusCycleTime": {
       "anyOf": [
@@ -194,7 +203,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "If this bullet has overridden statuses, this is the time to cycle between them."
     },
     "shapeType": {
       "$ref": "/chippy-schema/schemas/shapetype.json"
@@ -207,7 +217,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "Extra scale for sprite."
     },
     "spriteForwardOffset": {
       "anyOf": [
@@ -217,7 +228,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Amount the sprite is adjusted in forward direction."
     },
     "extraFrameSize": {
       "anyOf": [
@@ -227,7 +239,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "Number of extra spritesheet frames to use instead - (N+1)x(N+1) instead of 1x1."
     },
     "startMoveAngle": {
       "anyOf": [
@@ -237,7 +250,8 @@
         {
           "$ref": "/chippy-schema/schemas/rotation.json"
         }
-      ]
+      ],
+      "description": "Start with this move angle instead of moving in the pattern's current direction."
     },
     "startFacingAngle": {
       "anyOf": [
@@ -247,7 +261,8 @@
         {
           "$ref": "/chippy-schema/schemas/rotation.json"
         }
-      ]
+      ],
+      "description": "Start with this rotation instead of facing the current direction."
     },
     "impulseFrictionPercent": {
       "anyOf": [
@@ -257,7 +272,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How quickly the bullet slows down impulse velocity (default is 0.05)."
     },
     "stopPatternsOnDespawn": {
       "anyOf": [
@@ -267,10 +283,12 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Whether anchored patterns stop when the bullet is finished."
     },
     "useAbsoluteAngles": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "If true, don't add startAngle to keyframe angles."
     },
     "collideWithPixels": {
       "anyOf": [
@@ -290,7 +308,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, bullet rotates the direction it checks for collisions with pixels, and doesn't resolve visual overlaps (defaults to false). Used for turrets/drones/etc."
     },
     "ignorePlayerCollision": {
       "anyOf": [
@@ -300,7 +319,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Don't EVER collide with player - for when using bullet as visual effect, or when shot by player."
     },
     "useRawDeltaTime": {
       "anyOf": [
@@ -310,7 +330,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Ignore time-scaling."
     },
     "reflectLimit": {
       "anyOf": [
@@ -320,7 +341,8 @@
         {
           "type": "integer"
         }
-      ]
+      ],
+      "description": "Number of times bullet can reflect before despawning automatically."
     },
     "quickReflect": {
       "anyOf": [
@@ -330,7 +352,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Reflect instantly instead of animating."
     },
     "despawnStyle": {
       "anyOf": [
@@ -360,7 +383,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How much force it applies to pxcs it hits (also affected by pixelDamagePercent)."
     },
     "noCollisionLeniency": {
       "anyOf": [
@@ -370,7 +394,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "For small bullets, don't have a smaller hitbox than visuals when colliding with player."
     },
     "despawnOnPlayerHit": {
       "anyOf": [
@@ -380,13 +405,16 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Defaults to true."
     },
     "despawnWhenAllPatternsRemoved": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "If true, this bullet despawns when all patterns added to it through Bullet.AddPattern have despawned. Defaults to false."
     },
     "despawnWhenAnyPatternsRemoved": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "If true, this bullet despawns when any patterns added to it through Bullet.AddPattern has despawned. Defaults to false."
     },
     "isUnobtainable": {
       "anyOf": [
@@ -396,7 +424,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Used for status bullets - evaluated each frame and powerup cannot be collected while true."
     },
     "parallaxSpeed": {
       "anyOf": [
@@ -426,7 +455,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, player's IgnoreBulletDamage property won't prevent bullet's damage or `onHitPlayer` handler."
     },
     "borderWarningColor": {
       "anyOf": [
@@ -436,7 +466,8 @@
         {
           "$ref": "/chippy-schema/schemas/color.json"
         }
-      ]
+      ],
+      "description": "The color of the bullet when just out of camera bounds (uses current colorA when not set)."
     },
     "borderWarningGlow": {
       "anyOf": [
@@ -446,7 +477,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How much the bullet glows when just out of camera bounds."
     },
     "borderWarningMinOpacity": {
       "anyOf": [
@@ -456,7 +488,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How opaque the edges of the border warning are."
     },
     "outOfBoundsRadiusFactor": {
       "anyOf": [
@@ -466,7 +499,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "How far off camera until this bullet is removed (multiplied by out radius) (defaults to 4f). (also used for border warning range)"
     },
     "dontCheckBounds": {
       "anyOf": [
@@ -476,7 +510,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, don't disable this bullet based on being outside of arena."
     },
     "clampToBounds": {
       "anyOf": [
@@ -486,7 +521,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If true, force bullet to be inside its bounds."
     },
     "clampToBoundsVelocityDamping": {
       "anyOf": [
@@ -496,7 +532,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "If clampToBounds is true, damping of 0 will not affect velocity of clamped bullets, 1 will remove it completely."
     },
     "colorBlinkEasingType": {
       "anyOf": [
@@ -506,7 +543,8 @@
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
         }
-      ]
+      ],
+      "description": "Defaults to QuadInOut."
     },
     "colorBlinkStartTime": {
       "anyOf": [
@@ -516,7 +554,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "So that bullets in the same volley can have different color timing offsets."
     },
     "impactPattern": {},
     "circleSkew": {
@@ -527,7 +566,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Amount of skew (stretching in forward direction) when bullet traveling at max skew speed."
     },
     "circleSkewDist": {
       "anyOf": [
@@ -537,7 +577,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Distance (per fixed frame) required for full skew."
     },
     "circleSkewEasingType": {
       "anyOf": [
@@ -550,10 +591,12 @@
       ]
     },
     "changeTargetPlayerOnDeath": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "In co-op, should this bullet pick a new target player if the old target dies."
     },
     "despawnOnDeath": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "If true, despawn if target player dies."
     },
     "playerDamageDir": {
       "anyOf": [
@@ -563,7 +606,8 @@
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
         }
-      ]
+      ],
+      "description": "When player is hit by this bullet, which direction should force be applied to player (by default, towards player, away from bullet center)."
     },
     "autoUpdateTargetPlayer": {
       "type": "boolean"
@@ -582,7 +626,8 @@
       ]
     },
     "isStrictlyVisual": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Can never be Affected, Repelled, Destroyed, etc. Use for background bullets or other visual effects."
     },
     "updateFloatVar": {
       "anyOf": [
@@ -621,7 +666,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "Only for old replay support."
     },
     "totalPixelDamage": {
       "anyOf": [
@@ -631,7 +677,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "The max amount of damage this bullet can deal."
     },
     "partDamageFactor": {
       "anyOf": [
@@ -641,7 +688,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Damage multiplier when hitting a part instead of a single pixel (default is 1)."
     },
     "shouldReflect": {
       "anyOf": [
@@ -651,7 +699,8 @@
         {
           "type": "boolean"
         }
-      ]
+      ],
+      "description": "If bullet should reflect when hitting a pixel."
     },
     "grazeSize": {
       "anyOf": [
@@ -671,7 +720,8 @@
         {
           "type": "number"
         }
-      ]
+      ],
+      "description": "Amount of force the bullet applies against a grazing player (default is 0.4)."
     },
     "flipX": {
       "anyOf": [
@@ -694,7 +744,8 @@
       ]
     },
     "isPlayerBullet": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "Whether the bullet should be considered to be shot by the player."
     },
     "debugVector": {
       "anyOf": [
@@ -724,7 +775,8 @@
         {
           "$ref": "/chippy-schema/schemas/rotation.json"
         }
-      ]
+      ],
+      "description": "TODO: only supported by BulletArchetype bullets."
     },
     "maxGrazeAngle": {
       "anyOf": [
@@ -734,7 +786,8 @@
         {
           "$ref": "/chippy-schema/schemas/rotation.json"
         }
-      ]
+      ],
+      "description": "TODO: only supported by BulletArchetype bullets."
     }
   }
 }

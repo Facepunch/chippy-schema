@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitborderwarningdata.json",
+  "title": "SpaceUsurper.UnitBorderWarningData",
+  "description": "",
   "type": "object",
   "properties": {
     "range": {

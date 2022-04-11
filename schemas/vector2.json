@@ -1,4 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/chippy-schema/schemas/vector2.json"
+  "$id": "/chippy-schema/schemas/vector2.json",
+  "title": "UnityEngine.Vector2",
+  "description": ""
 }

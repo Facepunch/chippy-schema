@@ -1,4 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/chippy-schema/schemas/rect.json"
+  "$id": "/chippy-schema/schemas/rect.json",
+  "title": "UnityEngine.Rect",
+  "description": ""
 }

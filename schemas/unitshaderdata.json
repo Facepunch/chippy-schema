@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitshaderdata.json",
+  "title": "SpaceUsurper.UnitShaderData",
+  "description": "",
   "type": "object",
   "properties": {
     "intensity": {

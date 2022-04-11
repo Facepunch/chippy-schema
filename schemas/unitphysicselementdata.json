@@ -1,6 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitphysicselementdata.json",
+  "title": "SpaceUsurper.UnitPhysicsElementData",
+  "description": "",
   "type": "object",
   "properties": {
     "frictionPercentMin": {
