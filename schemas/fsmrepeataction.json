@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/fsmrepeataction.json",
+  "title": "SpaceUsurper.FsmRepeatAction",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "Repeat"
+      ]
+    },
+    "count": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "delay": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "inner": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/fsmaction.json"
+      }
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

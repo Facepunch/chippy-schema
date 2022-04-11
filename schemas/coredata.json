@@ -5,14 +5,15 @@
   "description": "",
   "type": "object",
   "properties": {
-    "#include": {},
-    "__$layers": {
-      "type": "object",
-      "patternProperties": {
-        ".*": {
-          "$ref": "/chippy-schema/schemas/corelayerdata.json"
+    "#include": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/coredata.json"
         }
-      }
+      ]
     },
     "precacheTextures": {
       "type": "array",

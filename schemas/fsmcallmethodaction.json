@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/fsmcallmethodaction.json",
+  "title": "SpaceUsurper.FsmCallMethodAction",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "CallMethod"
+      ]
+    },
+    "type": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "return": {
+      "type": "string"
+    },
+    "dynamic": {
+      "type": "boolean"
+    },
+    "ignoreNullRef": {
+      "type": "boolean"
+    },
+    "target": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {}
+      ]
+    },
+    "params": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {}
+      }
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

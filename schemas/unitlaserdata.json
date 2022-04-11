@@ -302,7 +302,16 @@
     },
     "ignoreCollisionWithPaths": {
       "type": "array",
-      "items": {}
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          },
+          {
+            "$ref": "/chippy-schema/schemas/unitdata.json"
+          }
+        ]
+      }
     },
     "onHitPlayer": {
       "$ref": "/chippy-schema/schemas/actionlist.json"

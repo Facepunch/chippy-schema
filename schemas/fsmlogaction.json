@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/fsmlogaction.json",
+  "title": "SpaceUsurper.FsmLogAction",
+  "description": "Write a message to the game's log file. Can be useful for debugging.",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "Log"
+      ]
+    },
+    "message": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "description": "Message to write."
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

@@ -2,5 +2,37 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/fsmaction.json",
   "title": "SpaceUsurper.FsmAction",
-  "description": "Base type for all actions that can be included in an SpaceUsurper.ActionList. These are used to execute behaviors in FSM states, and to implement callbacks."
+  "description": "Base type for all actions that can be included in an SpaceUsurper.ActionList. These are used to execute behaviors in FSM states, and to implement callbacks.",
+  "anyOf": [
+    {
+      "$ref": "/chippy-schema/schemas/fsmcallmethodaction.json"
+    },
+    {
+      "$ref": "/chippy-schema/schemas/fsmcallsubroutineaction.json"
+    },
+    {
+      "$ref": "/chippy-schema/schemas/fsmconditionaction.json"
+    },
+    {
+      "$ref": "/chippy-schema/schemas/fsmgotoaction.json"
+    },
+    {
+      "$ref": "/chippy-schema/schemas/fsmlogaction.json"
+    },
+    {
+      "$ref": "/chippy-schema/schemas/fsmrepeataction.json"
+    },
+    {
+      "$ref": "/chippy-schema/schemas/fsmsetvalueaction.json"
+    },
+    {
+      "$ref": "/chippy-schema/schemas/fsmswitchaction.json"
+    },
+    {
+      "$ref": "/chippy-schema/schemas/fsmwaitaction.json"
+    },
+    {
+      "$ref": "/chippy-schema/schemas/fsmyieldaction.json"
+    }
+  ]
 }

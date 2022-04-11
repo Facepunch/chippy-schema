@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/fsmconditionaction.json",
+  "title": "SpaceUsurper.FsmConditionAction",
+  "description": "Evaluates a condition before deciding which set of actions to perform next.",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "Condition"
+      ]
+    },
+    "condition": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ],
+      "description": "Condition to evaluate, the result of which will decide which set of actions to perform."
+    },
+    "true": {
+      "type": "array",
+      "items": {},
+      "description": "Optional actions to run if the `condition` evaluated to `true`."
+    },
+    "false": {
+      "type": "array",
+      "items": {},
+      "description": "Optional actions to run if the `condition` evaluated to `false`."
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

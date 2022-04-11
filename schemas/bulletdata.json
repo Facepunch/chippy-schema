@@ -557,7 +557,16 @@
       ],
       "description": "So that bullets in the same volley can have different color timing offsets."
     },
-    "impactPattern": {},
+    "impactPattern": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/patterndata.json"
+        }
+      ]
+    },
     "circleSkew": {
       "anyOf": [
         {

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/fsmsetvalueaction.json",
+  "title": "SpaceUsurper.FsmSetValueAction",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "SetValue"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "index": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "target": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/ipropertycontainer.json"
+        }
+      ]
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

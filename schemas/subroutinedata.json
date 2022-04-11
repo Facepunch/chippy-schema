@@ -1,10 +1,21 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/chippy-schema/schemas/fsmdata.json",
-  "title": "SpaceUsurper.FsmData",
+  "$id": "/chippy-schema/schemas/subroutinedata.json",
+  "title": "SpaceUsurper.SubroutineData",
   "description": "",
   "type": "object",
   "properties": {
+    "parameters": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/propertydata.json"
+        }
+      }
+    },
+    "actions": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
     "#include": {
       "type": "array",
       "items": {

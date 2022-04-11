@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/fsmwaitaction.json",
+  "title": "SpaceUsurper.FsmWaitAction",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "Wait"
+      ]
+    },
+    "time": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "cantBeDelayed": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

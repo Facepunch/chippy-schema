@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/fsmyieldaction.json",
+  "title": "SpaceUsurper.FsmYieldAction",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "Yield"
+      ]
+    }
+  },
+  "required": [
+    "action"
+  ]
+}

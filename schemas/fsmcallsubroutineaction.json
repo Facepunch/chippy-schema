@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/fsmcallsubroutineaction.json",
+  "title": "SpaceUsurper.FsmCallSubroutineAction",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "CallSubroutine"
+      ]
+    },
+    "target": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/ifsmcontainer.json"
+        }
+      ]
+    },
+    "path": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/subroutinedata.json"
+        }
+      ]
+    },
+    "ignoreNullRef": {
+      "type": "boolean"
+    },
+    "coroutine": {
+      "type": "boolean"
+    },
+    "params": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {}
+      }
+    }
+  },
+  "required": [
+    "action"
+  ]
+}
