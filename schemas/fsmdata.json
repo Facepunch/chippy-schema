@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/fsmdata.json",
+  "type": "object",
+  "properties": {
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "__$states": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/fsmstate.json"
+        }
+      }
+    }
+  }
+}

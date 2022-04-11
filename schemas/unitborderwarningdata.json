@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/unitborderwarningdata.json",
+  "type": "object",
+  "properties": {
+    "range": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "radius": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "color": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "opacity": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "dotFactorMin": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "posEasing": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/easingtype.json"
+        }
+      ]
+    },
+    "glowEasing": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/easingtype.json"
+        }
+      ]
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    }
+  }
+}

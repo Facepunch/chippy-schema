@@ -1,0 +1,740 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/bulletdata.json",
+  "type": "object",
+  "properties": {
+    "disableBulletArchetypeGeneration": {
+      "type": "boolean"
+    },
+    "onStart": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onUpdate": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onHitPlayer": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onHitPixel": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDestroyPixel": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onHitPart": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onHitPartProtected": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onLifetimeFinished": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDespawn": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onRemove": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onOutOfBounds": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onAutoUpdateTargetPlayer": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "bounds": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/rect.json"
+        }
+      ]
+    },
+    "onProximity": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "keyframes": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/bulletkeyframedata.json"
+      }
+    },
+    "lifetime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "shouldLoop": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "despawnAfterKeyframes": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "sfxHitPlayer": {
+      "$ref": "/chippy-schema/schemas/sfxident.json"
+    },
+    "sfxHitPixel": {
+      "$ref": "/chippy-schema/schemas/sfxident.json"
+    },
+    "depthLevel": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/depthlevel.json"
+        }
+      ]
+    },
+    "startSpeed": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "mass": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "anchored": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "shouldOverrideStatusEffect": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "statusPaths": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          },
+          {
+            "$ref": "/chippy-schema/schemas/statuseffectdata.json"
+          }
+        ]
+      }
+    },
+    "statusLevel": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "statusCycleTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "shapeType": {
+      "$ref": "/chippy-schema/schemas/shapetype.json"
+    },
+    "spriteScale": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "spriteForwardOffset": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "extraFrameSize": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "startMoveAngle": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/rotation.json"
+        }
+      ]
+    },
+    "startFacingAngle": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/rotation.json"
+        }
+      ]
+    },
+    "impulseFrictionPercent": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "stopPatternsOnDespawn": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "useAbsoluteAngles": {
+      "type": "boolean"
+    },
+    "collideWithPixels": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "collideInAllDirections": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "ignorePlayerCollision": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "useRawDeltaTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "reflectLimit": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "quickReflect": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "despawnStyle": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/despawnstyle.json"
+        }
+      ]
+    },
+    "despawnTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "force": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "noCollisionLeniency": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "despawnOnPlayerHit": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "despawnWhenAllPatternsRemoved": {
+      "type": "boolean"
+    },
+    "despawnWhenAnyPatternsRemoved": {
+      "type": "boolean"
+    },
+    "isUnobtainable": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "parallaxSpeed": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "cantBeDestroyed": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "cantBeIgnored": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "borderWarningColor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "borderWarningGlow": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "borderWarningMinOpacity": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "outOfBoundsRadiusFactor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "dontCheckBounds": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "clampToBounds": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "clampToBoundsVelocityDamping": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "colorBlinkEasingType": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/easingtype.json"
+        }
+      ]
+    },
+    "colorBlinkStartTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "impactPattern": {},
+    "circleSkew": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "circleSkewDist": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "circleSkewEasingType": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/easingtype.json"
+        }
+      ]
+    },
+    "changeTargetPlayerOnDeath": {
+      "type": "boolean"
+    },
+    "despawnOnDeath": {
+      "type": "boolean"
+    },
+    "playerDamageDir": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "autoUpdateTargetPlayer": {
+      "type": "boolean"
+    },
+    "alwaysTargetClosestPlayer": {
+      "type": "boolean"
+    },
+    "targetPlayerUpdatePeriod": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "isStrictlyVisual": {
+      "type": "boolean"
+    },
+    "updateFloatVar": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "bulletArchetypeIgnoreOnUpdate": {
+      "type": "boolean"
+    },
+    "proximityUnits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proximityRange": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "useLegacyDamage": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "totalPixelDamage": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "partDamageFactor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "shouldReflect": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "grazeSize": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "pushStrength": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "flipX": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "flipY": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "isPlayerBullet": {
+      "type": "boolean"
+    },
+    "debugVector": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "debugText": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "minGrazeAngle": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/rotation.json"
+        }
+      ]
+    },
+    "maxGrazeAngle": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/rotation.json"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/unitpixeljsondata.json",
+  "type": "object",
+  "properties": {
+    "ranges": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          },
+          {
+            "type": "array",
+            "items": {
+              "$ref": "/chippy-schema/schemas/pixeldata.json"
+            }
+          }
+        ]
+      }
+    },
+    "category": {
+      "type": "string"
+    },
+    "sfxHit": {
+      "$ref": "/chippy-schema/schemas/sfxident.json"
+    },
+    "sfxDestroy": {
+      "$ref": "/chippy-schema/schemas/sfxident.json"
+    },
+    "sfxDisconnect": {
+      "$ref": "/chippy-schema/schemas/sfxident.json"
+    },
+    "sfxExplode": {
+      "$ref": "/chippy-schema/schemas/sfxident.json"
+    },
+    "hp": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "pixelType": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/pixeltype.json"
+        }
+      ]
+    },
+    "isAnchor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "color": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "damagedColor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "hitGlow": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "hitFlashTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "tint": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "deathPattern": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/patterndata.json"
+        }
+      ]
+    },
+    "ignoreCollision": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "damagePlayer": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "destroyVibrationStrength": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "isSpawnSource": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "breakaway": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "numDebris": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "cantBeTransformed": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "damageThreat": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "range": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "/chippy-schema/schemas/pixeldata.json"
+          }
+        }
+      ]
+    }
+  }
+}

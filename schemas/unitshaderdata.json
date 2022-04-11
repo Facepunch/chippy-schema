@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/unitshaderdata.json",
+  "type": "object",
+  "properties": {
+    "intensity": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "speedX": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "speedY": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "freqX": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "freqY": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "depthX": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "depthY": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "timeFactor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "timeFactor2": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "timeFactor3": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "texturePath": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    }
+  }
+}

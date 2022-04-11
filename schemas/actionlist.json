@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/actionlist.json",
+  "type": "array",
+  "items": {
+    "$ref": "/chippy-schema/schemas/fsmaction.json"
+  }
+}

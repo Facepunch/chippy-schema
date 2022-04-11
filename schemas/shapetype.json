@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/shapetype.json",
+  "type": "string",
+  "enum": [
+    "Circle",
+    "Diamond",
+    "Rect"
+  ]
+}

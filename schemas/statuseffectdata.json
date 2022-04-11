@@ -1,0 +1,307 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/statuseffectdata.json",
+  "type": "object",
+  "properties": {
+    "category": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/statuseffectcategorydata.json"
+        }
+      ]
+    },
+    "behaviour": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/fsmdata.json"
+        }
+      ]
+    },
+    "properties": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/propertydata.json"
+        }
+      }
+    },
+    "displayName": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "description": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "shortDescription": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "auxText": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "auxTextColor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "staticName": {
+      "$ref": "/chippy-schema/schemas/localizedstring.json"
+    },
+    "staticDescription": {
+      "$ref": "/chippy-schema/schemas/localizedstring.json"
+    },
+    "icon": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "iconColorBlinkTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "iconFlipX": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "iconFlipY": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "iconAngle": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "modifiers": {
+      "$ref": "/chippy-schema/schemas/statuseffectplayermodifierdata.json"
+    },
+    "doesPreventDeath": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "preventDeathPriority": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "numLevels": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "replacesMainGun": {
+      "type": "boolean"
+    },
+    "isSelectable": {
+      "type": "boolean"
+    },
+    "hideOnPauseMenu": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "isDroppable": {
+      "type": "boolean"
+    },
+    "dropStackLimit": {
+      "type": "integer"
+    },
+    "chargeIncrease": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "chargeDecay": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "chargeRequired": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "onEnable": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onMaxedOut": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onLevelUp": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onLevelDown": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPreventDeath": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDisable": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onUpdate": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onActivate": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onSelect": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDeselect": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onExecute": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerHit": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerHitBullet": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onTrigger": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerRevive": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerActivateStatus": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "debugVector": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "debugText": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    }
+  }
+}

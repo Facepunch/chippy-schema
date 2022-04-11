@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/stagedata.json",
+  "type": "object",
+  "properties": {
+    "loadingTips": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/loadingtipdata.json"
+      }
+    },
+    "depthLevels": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/depthleveldata.json"
+        }
+      ]
+    },
+    "properties": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/propertydata.json"
+        }
+      }
+    },
+    "player": {
+      "$ref": "/chippy-schema/schemas/stageplayerdata.json"
+    },
+    "playerModes": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/playermodedata.json"
+      }
+    },
+    "behaviour": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/fsmdata.json"
+        }
+      ]
+    },
+    "song": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/songconfigdata.json"
+        }
+      ]
+    },
+    "lowPassDuringSlowmo": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "songTimeScale": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "gameMode": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/gamemodedata.json"
+        }
+      ]
+    },
+    "medals": {
+      "$ref": "/chippy-schema/schemas/medaldata.json"
+    },
+    "arena": {
+      "$ref": "/chippy-schema/schemas/arenadata.json"
+    },
+    "mergedTargetViewArea": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "cameraStageMargin": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector4.json"
+        }
+      ]
+    },
+    "units": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/stageunitdata.json"
+        }
+      }
+    },
+    "onStart": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onUpdate": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerHit": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerDie": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerRevive": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerActivateStatus": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerStatusLevelChanged": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "allowBrakeHint": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "difficulty": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "enableBulletArchetypes": {
+      "type": "boolean"
+    },
+    "continueWithStage": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {}
+      ]
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "patternDebugText": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    }
+  }
+}

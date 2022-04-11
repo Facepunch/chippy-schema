@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/spritedata.json",
+  "type": "object",
+  "properties": {
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "gridHeight": {
+      "type": "integer"
+    },
+    "gridWidth": {
+      "type": "integer"
+    },
+    "spritesheetPath": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "anims": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/spriteanimdata.json"
+        }
+      }
+    }
+  }
+}

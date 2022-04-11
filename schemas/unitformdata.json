@@ -1,0 +1,696 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/unitformdata.json",
+  "type": "object",
+  "properties": {
+    "moveMode": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/unitmovementmode.json"
+        }
+      ]
+    },
+    "accelVector": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "targetPos": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "posLerpSpeed": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "facingMode": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/unitfacingmode.json"
+        }
+      ]
+    },
+    "targetFacingAngle": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "facingLerpSpeed": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "rotationSpeed": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "bounds": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/rect.json"
+        }
+      ]
+    },
+    "onOutOfBoundsLeft": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onOutOfBoundsRight": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onOutOfBoundsDown": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onOutOfBoundsUp": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "stayInBoundsStrength": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "stayInBoundsStrengthLeft": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "stayInBoundsStrengthRight": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "stayInBoundsStrengthDown": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "stayInBoundsStrengthUp": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "startOpacity": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "bgFadeInColor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "bgFadeOutColor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "chunkColorStart": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "chunkColorFinish": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "chunkSizeFinish": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "chunkVelocity": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "chunkGlobalVelocity": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "chunkRotationSpeed": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "chunkRotationFriction": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "chunkMovementFriction": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "chunkLifetimeMultiplier": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "spawnPos": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "spawnDelay": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "dontAutoSpawn": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "spawnScale": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "spawnStartScale": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "fadeInTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "fadeOutTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "bgColor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "bgOpacity": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "disconnectBgColor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "disconnectBgTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "disconnectBgReqNumPixels": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "dontErodePixelChunks": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "pixelChunkDepthLevel": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/depthlevel.json"
+        }
+      ]
+    },
+    "coreSpawnTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "pixelSpawnTimeStart": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "pixelSpawnTimeEnd": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "pxcSource": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/pxcsourcedata.json"
+        }
+      ]
+    },
+    "pxcAnimDir": {
+      "type": "string"
+    },
+    "anims": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/unitanimdata.json"
+        }
+      }
+    },
+    "baseHp": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "progressWeight": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "progress": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "transformations": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/pixeljsontransformation.json"
+      }
+    },
+    "parts": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/unitpartdata.json"
+        }
+      }
+    },
+    "texture": {
+      "$ref": "/chippy-schema/schemas/unittexturedata.json"
+    },
+    "onUpdate": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onSpawn": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onFormRespawn": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDestroy": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onHidden": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPixelHit": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPixelHitByLaser": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPixelDestroyed": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPartHit": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPartHitByLaser": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPartDestroyed": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onImplodeStart": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onImplodeUpdate": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onImplodeFinish": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerHit": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerDie": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerRevive": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerActivateStatus": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onPlayerStatusLevelChanged": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDormantStart": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDormantEnd": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDormantUpdate": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "autoUpdateTargetPlayer": {
+      "type": "boolean"
+    },
+    "changeTargetPlayerOnDeath": {
+      "type": "boolean"
+    },
+    "alwaysTargetClosestPlayer": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "targetPlayerUpdatePeriod": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "onAutoUpdateTargetPlayer": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "allowRetargetWhileCharging": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "onHitPlayer": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDisconnectChunk": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "implodeTime": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "pixels": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/unitpixeljsondata.json"
+      }
+    },
+    "repulsionCircles": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/unitrepulsioncircledata.json"
+      }
+    },
+    "pixelOffset": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "avoidUnitStrength": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "repelUnitStrength": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    }
+  }
+}

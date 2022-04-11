@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/corelayerdata.json",
+  "type": "object",
+  "properties": {
+    "image": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "color": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        }
+      ]
+    },
+    "colorB": {
+      "$ref": "/chippy-schema/schemas/color.json"
+    },
+    "colorBlinkTime": {
+      "type": "number"
+    },
+    "colorBlinkEasingType": {
+      "$ref": "/chippy-schema/schemas/easingtype.json"
+    },
+    "glow": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "tintPercent": {
+      "type": "number"
+    },
+    "opacity": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "angle": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "dontRotate": {
+      "type": "boolean"
+    },
+    "offset": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        }
+      ]
+    },
+    "dontRotateOffset": {
+      "type": "boolean"
+    },
+    "scale": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "lookRadius": {
+      "type": "number"
+    },
+    "jitterScale": {
+      "type": "number"
+    },
+    "jitterAngle": {
+      "type": "number"
+    },
+    "wobbleSpeed": {
+      "type": "number"
+    },
+    "wobbleScale": {
+      "type": "number"
+    },
+    "bounceAngle": {
+      "type": "number"
+    },
+    "bounceSpeed": {
+      "type": "number"
+    },
+    "bounceScale": {
+      "type": "number"
+    },
+    "spinSpeed": {
+      "type": "number"
+    },
+    "rotationSymmetry": {
+      "type": "number"
+    },
+    "chargePercent": {
+      "type": "number"
+    },
+    "chargeScale": {
+      "type": "number"
+    },
+    "chargeScaleXY": {
+      "$ref": "/chippy-schema/schemas/vector2.json"
+    },
+    "chargeWobbleSpeed": {
+      "type": "number"
+    },
+    "chargeWobbleScale": {
+      "type": "number"
+    },
+    "chargeJitterAngle": {
+      "type": "number"
+    },
+    "chargeJitterScale": {
+      "type": "number"
+    },
+    "chargeOpacity": {
+      "type": "number"
+    },
+    "chargeOffset": {
+      "$ref": "/chippy-schema/schemas/vector2.json"
+    },
+    "chargeEasingType": {
+      "$ref": "/chippy-schema/schemas/easingtype.json"
+    },
+    "shootPercent": {
+      "type": "number"
+    },
+    "shootScale": {
+      "type": "number"
+    },
+    "shootScaleXY": {
+      "$ref": "/chippy-schema/schemas/vector2.json"
+    },
+    "shootSpinSpeed": {
+      "type": "number"
+    },
+    "shootWobbleSpeed": {
+      "type": "number"
+    },
+    "shootWobbleScale": {
+      "type": "number"
+    },
+    "shootJitterAngle": {
+      "type": "number"
+    },
+    "shootJitterScale": {
+      "type": "number"
+    },
+    "shootOpacity": {
+      "type": "number"
+    },
+    "shootOffset": {
+      "$ref": "/chippy-schema/schemas/vector2.json"
+    },
+    "shootEasingType": {
+      "$ref": "/chippy-schema/schemas/easingtype.json"
+    },
+    "reactScale": {
+      "type": "number"
+    },
+    "reactScaleXY": {
+      "$ref": "/chippy-schema/schemas/vector2.json"
+    },
+    "reactWobbleSpeed": {
+      "type": "number"
+    },
+    "reactWobbleScale": {
+      "type": "number"
+    },
+    "reactJitterAngle": {
+      "type": "number"
+    },
+    "reactJitterScale": {
+      "type": "number"
+    },
+    "reactOpacity": {
+      "type": "number"
+    },
+    "reactGlow": {
+      "type": "number"
+    },
+    "reactOffset": {
+      "$ref": "/chippy-schema/schemas/vector2.json"
+    },
+    "reactEasingType": {
+      "$ref": "/chippy-schema/schemas/easingtype.json"
+    },
+    "despawnTime": {
+      "type": "number"
+    },
+    "despawnScale": {
+      "type": "number"
+    },
+    "despawnEasingType": {
+      "$ref": "/chippy-schema/schemas/easingtype.json"
+    },
+    "pointFilter": {
+      "type": "boolean"
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    }
+  }
+}

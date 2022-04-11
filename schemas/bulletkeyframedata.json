@@ -1,0 +1,1065 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/bulletkeyframedata.json",
+  "type": "object",
+  "properties": {
+    "sprites": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "spriteIndex": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "onKeyframe": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "sprite": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "duration": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "moveMode": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/bulletmovemode.json"
+        }
+      ]
+    },
+    "velocityMode": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/bulletvelocitymode.json"
+        }
+      ]
+    },
+    "facingMode": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/bulletfacingmode.json"
+        }
+      ]
+    },
+    "targetPos": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/vector2.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
+        }
+      ]
+    },
+    "posLerpSpeed": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "moveAngle": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/rotation.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/rotation.json"
+            }
+          ]
+        }
+      ]
+    },
+    "rotationSpeed": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "facingSpeedPercent": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "targetFacingAngle": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/rotation.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/rotation.json"
+            }
+          ]
+        }
+      ]
+    },
+    "acceleration": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "frictionPercent": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "radius": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "rectSize": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/vector2.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
+        }
+      ]
+    },
+    "rectWidthMods": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/vector2.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
+        }
+      ]
+    },
+    "length": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "crossWidth": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "crossDistance": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "colorA1": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/color.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            }
+          ]
+        }
+      ]
+    },
+    "colorA2": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/color.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            }
+          ]
+        }
+      ]
+    },
+    "colorB1": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/color.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            }
+          ]
+        }
+      ]
+    },
+    "colorB2": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/color.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            }
+          ]
+        }
+      ]
+    },
+    "colorC1": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/color.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            }
+          ]
+        }
+      ]
+    },
+    "colorC2": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "$ref": "/chippy-schema/schemas/color.json"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            }
+          ]
+        }
+      ]
+    },
+    "glowA": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "glowB": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "glowC": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "opacity": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "colorBlinkTime": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "easingType": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/easingtype.json"
+        }
+      ]
+    },
+    "loopStart": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "loopEnd": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "loopModulus": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "chance": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "next": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    },
+    "isPositive": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "pixelDamagePercent": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+            },
+            "value": {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "ignorePixelCollision": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "ignorePlayerCollision": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "cantBeAffected": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "proximityEnabled": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "vibrateOnTouchAmount": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "vibrateOnTouchHorizThreshold": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "vibrateOnTouchEasingType": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/easingtype.json"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/pixeljsontransformation.json",
+  "type": "string",
+  "enum": [
+    "None",
+    "FlipX",
+    "FlipY",
+    "RotC90",
+    "RotCC90",
+    "Rot180"
+  ]
+}
