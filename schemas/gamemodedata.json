@@ -16,40 +16,40 @@
     "scoreFunction": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "integer"
         },
         {
-          "type": "integer"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "progressFunction": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "showTimer": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "showProgress": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },

@@ -10,13 +10,13 @@
       "items": {
         "anyOf": [
           {
-            "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-          },
-          {
             "type": "array",
             "items": {
               "$ref": "/chippy-schema/schemas/pixeldata.json"
             }
+          },
+          {
+            "$ref": "/chippy-schema/schemas/iscriptfunc.json"
           }
         ]
       }
@@ -39,160 +39,160 @@
     "hp": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "pixelType": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/pixeltype.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/pixeltype.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "isAnchor": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "color": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "damagedColor": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "hitGlow": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "hitFlashTime": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "tint": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "deathPattern": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/patterndata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/patterndata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
     "ignoreCollision": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "damagePlayer": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "destroyVibrationStrength": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "isSpawnSource": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "breakaway": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "numDebris": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "integer"
         },
         {
-          "type": "integer"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "cantBeTransformed": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -202,10 +202,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -230,13 +230,13 @@
     "range": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
           "type": "array",
           "items": {
             "$ref": "/chippy-schema/schemas/pixeldata.json"
           }
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     }

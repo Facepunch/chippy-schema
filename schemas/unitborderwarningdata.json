@@ -8,70 +8,70 @@
     "range": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "radius": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "color": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "opacity": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "dotFactorMin": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "posEasing": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/easingtype.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/easingtype.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "glowEasing": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/easingtype.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/easingtype.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },

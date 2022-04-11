@@ -8,20 +8,20 @@
     "category": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/statuseffectcategorydata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/statuseffectcategorydata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
     "behaviour": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/fsmdata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/fsmdata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
@@ -36,50 +36,50 @@
     "displayName": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "string"
         },
         {
-          "type": "string"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "description": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "string"
         },
         {
-          "type": "string"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "shortDescription": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "string"
         },
         {
-          "type": "string"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "auxText": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "string"
         },
         {
-          "type": "string"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "auxTextColor": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -99,40 +99,40 @@
     "iconColorBlinkTime": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "iconFlipX": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "iconFlipY": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "iconAngle": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -142,10 +142,10 @@
     "doesPreventDeath": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -155,10 +155,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -170,10 +170,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "integer"
             },
             {
-              "type": "integer"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -188,10 +188,10 @@
     "hideOnPauseMenu": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -204,30 +204,30 @@
     "chargeIncrease": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "chargeDecay": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "chargeRequired": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -298,20 +298,20 @@
     "debugVector": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/vector2.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/vector2.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "debugText": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "string"
         },
         {
-          "type": "string"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     }

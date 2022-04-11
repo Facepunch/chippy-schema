@@ -14,30 +14,30 @@
     "volume": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "lowpass": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "highpass": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },

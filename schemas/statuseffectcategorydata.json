@@ -8,30 +8,30 @@
     "color1": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "color2": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "cornerRadius": {
       "anyOf": [
         {
-          "type": "null"
+          "type": "number"
         },
         {
-          "type": "number"
+          "type": "null"
         }
       ]
     },

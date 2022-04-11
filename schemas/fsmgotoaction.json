@@ -14,10 +14,10 @@
     "state": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "string"
         },
         {
-          "type": "string"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     }

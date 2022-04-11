@@ -11,10 +11,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -23,60 +23,60 @@
     "moveSpeedMultiplierX": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "moveSpeedMultiplierY": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "facingSpeedMultiplier": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "frictionMultiplier": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "lookSpeedPercent": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "hitboxRadiusMultiplier": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -86,10 +86,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -98,10 +98,10 @@
     "reverseInputPercent": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -111,10 +111,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -126,10 +126,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -138,10 +138,10 @@
     "damageAmount": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -151,10 +151,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "boolean"
             },
             {
-              "type": "boolean"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -163,60 +163,60 @@
     "ignoreBulletDamage": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "ignoreLaserDamage": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "opacityMultiplier": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "bodyColorA": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "bodyColorB": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "bodyColorC": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/color.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/color.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -226,10 +226,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -241,10 +241,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -253,10 +253,10 @@
     "threatMultiplier": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },

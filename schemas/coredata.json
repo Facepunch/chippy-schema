@@ -8,10 +8,10 @@
     "#include": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/coredata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/coredata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },

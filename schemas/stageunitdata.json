@@ -8,10 +8,10 @@
     "config": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/unitdata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/unitdata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
@@ -21,20 +21,20 @@
     "progressWeight": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "count": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "integer"
         },
         {
-          "type": "integer"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },

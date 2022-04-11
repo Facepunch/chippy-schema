@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/chippy-schema/schemas/songconfigdata.json",
-  "title": "SpaceUsurper.SongConfigData",
+  "$id": "/chippy-schema/schemas/propertycontainerdata.json",
+  "title": "SpaceUsurper.PropertyContainerData",
   "description": "",
   "type": "object",
   "properties": {
@@ -10,30 +10,6 @@
       "patternProperties": {
         ".*": {
           "$ref": "/chippy-schema/schemas/propertydata.json"
-        }
-      }
-    },
-    "beatsPerMinute": {
-      "anyOf": [
-        {
-          "type": "number"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        }
-      ]
-    },
-    "beatsPerBar": {
-      "type": "integer"
-    },
-    "restartOnStageReset": {
-      "type": "boolean"
-    },
-    "layers": {
-      "type": "object",
-      "patternProperties": {
-        ".*": {
-          "$ref": "/chippy-schema/schemas/songlayerdata.json"
         }
       }
     },

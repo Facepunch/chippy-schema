@@ -14,10 +14,10 @@
     "depthLevels": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/depthleveldata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/depthleveldata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
@@ -41,50 +41,50 @@
     "behaviour": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/fsmdata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/fsmdata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
     "song": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/songconfigdata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/songconfigdata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
     "lowPassDuringSlowmo": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "songTimeScale": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "gameMode": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/gamemodedata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/gamemodedata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
@@ -97,10 +97,10 @@
     "mergedTargetViewArea": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -110,10 +110,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/vector4.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/vector4.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -151,20 +151,20 @@
     "allowBrakeHint": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "boolean"
         },
         {
-          "type": "boolean"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "difficulty": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -179,10 +179,10 @@
     "continueWithStage": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/stagedata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/stagedata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
@@ -208,10 +208,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "string"
             },
             {
-              "type": "string"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }

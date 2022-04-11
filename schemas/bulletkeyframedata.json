@@ -18,10 +18,10 @@
     "spriteIndex": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "integer"
         },
         {
-          "type": "integer"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -59,40 +59,40 @@
     "duration": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "type": "number"
         },
         {
-          "type": "number"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "moveMode": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/bulletmovemode.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/bulletmovemode.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "velocityMode": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/bulletvelocitymode.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/bulletvelocitymode.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "facingMode": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/bulletfacingmode.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/bulletfacingmode.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
@@ -110,10 +110,10 @@
                 "value": {
                   "anyOf": [
                     {
-                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                      "$ref": "/chippy-schema/schemas/vector2.json"
                     },
                     {
-                      "$ref": "/chippy-schema/schemas/vector2.json"
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                     }
                   ]
                 }
@@ -122,10 +122,10 @@
             {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/vector2.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/vector2.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -144,10 +144,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -156,10 +156,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -179,10 +179,10 @@
                 "value": {
                   "anyOf": [
                     {
-                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                      "$ref": "/chippy-schema/schemas/rotation.json"
                     },
                     {
-                      "$ref": "/chippy-schema/schemas/rotation.json"
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                     }
                   ]
                 }
@@ -191,10 +191,10 @@
             {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/rotation.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/rotation.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -213,10 +213,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -225,10 +225,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -245,10 +245,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -257,10 +257,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -277,10 +277,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/rotation.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/rotation.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -289,10 +289,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/rotation.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/rotation.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -309,10 +309,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -321,10 +321,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -341,10 +341,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -353,10 +353,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -373,10 +373,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -385,10 +385,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -405,10 +405,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/vector2.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/vector2.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -417,10 +417,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/vector2.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/vector2.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -437,10 +437,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/vector2.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/vector2.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -449,10 +449,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/vector2.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/vector2.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -469,10 +469,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -481,10 +481,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -501,10 +501,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -513,10 +513,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -533,10 +533,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -545,10 +545,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -565,10 +565,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/color.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/color.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -577,10 +577,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/color.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/color.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -597,10 +597,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/color.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/color.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -609,10 +609,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/color.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/color.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -629,10 +629,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/color.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/color.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -641,10 +641,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/color.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/color.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -661,10 +661,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/color.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/color.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -673,10 +673,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/color.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/color.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -693,10 +693,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/color.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/color.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -705,10 +705,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/color.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/color.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -725,10 +725,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "$ref": "/chippy-schema/schemas/color.json"
                 },
                 {
-                  "$ref": "/chippy-schema/schemas/color.json"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -737,10 +737,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/color.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/color.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -757,10 +757,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -769,10 +769,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -789,10 +789,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -801,10 +801,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -821,10 +821,10 @@
             "value": {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -833,10 +833,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -856,10 +856,10 @@
                 "value": {
                   "anyOf": [
                     {
-                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                      "type": "number"
                     },
                     {
-                      "type": "number"
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                     }
                   ]
                 }
@@ -868,10 +868,10 @@
             {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -893,10 +893,10 @@
                 "value": {
                   "anyOf": [
                     {
-                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                      "type": "number"
                     },
                     {
-                      "type": "number"
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                     }
                   ]
                 }
@@ -905,10 +905,10 @@
             {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -922,10 +922,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/easingtype.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/easingtype.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -937,10 +937,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "integer"
             },
             {
-              "type": "integer"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -952,10 +952,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "integer"
             },
             {
-              "type": "integer"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -967,10 +967,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "integer"
             },
             {
-              "type": "integer"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -982,10 +982,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -997,10 +997,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "integer"
             },
             {
-              "type": "integer"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -1012,10 +1012,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "boolean"
             },
             {
-              "type": "boolean"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -1035,10 +1035,10 @@
                 "value": {
                   "anyOf": [
                     {
-                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                      "type": "number"
                     },
                     {
-                      "type": "number"
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                     }
                   ]
                 }
@@ -1047,10 +1047,10 @@
             {
               "anyOf": [
                 {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                  "type": "number"
                 },
                 {
-                  "type": "number"
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
                 }
               ]
             }
@@ -1064,10 +1064,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "boolean"
             },
             {
-              "type": "boolean"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -1079,10 +1079,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "boolean"
             },
             {
-              "type": "boolean"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -1094,10 +1094,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "boolean"
             },
             {
-              "type": "boolean"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -1109,10 +1109,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "boolean"
             },
             {
-              "type": "boolean"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -1124,10 +1124,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -1139,10 +1139,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "number"
             },
             {
-              "type": "number"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -1154,10 +1154,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "$ref": "/chippy-schema/schemas/easingtype.json"
             },
             {
-              "$ref": "/chippy-schema/schemas/easingtype.json"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }

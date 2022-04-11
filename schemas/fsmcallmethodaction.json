@@ -28,10 +28,10 @@
     },
     "target": {
       "anyOf": [
+        {},
         {
           "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {}
+        }
       ]
     },
     "params": {

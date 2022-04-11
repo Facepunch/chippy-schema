@@ -17,10 +17,10 @@
         {
           "anyOf": [
             {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+              "type": "boolean"
             },
             {
-              "type": "boolean"
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
             }
           ]
         }
@@ -42,7 +42,9 @@
       "allOf": [
         {
           "type": "array",
-          "items": {}
+          "items": {
+            "$ref": "/chippy-schema/schemas/fsmaction.json"
+          }
         }
       ]
     }

@@ -14,20 +14,20 @@
     "target": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+          "$ref": "/chippy-schema/schemas/ifsmcontainer.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/ifsmcontainer.json"
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
         }
       ]
     },
     "path": {
       "anyOf": [
         {
-          "$ref": "/chippy-schema/schemas/datapath.json"
+          "$ref": "/chippy-schema/schemas/subroutinedata.json"
         },
         {
-          "$ref": "/chippy-schema/schemas/subroutinedata.json"
+          "$ref": "/chippy-schema/schemas/datapath.json"
         }
       ]
     },
