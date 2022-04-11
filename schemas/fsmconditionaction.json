@@ -12,25 +12,39 @@
       ]
     },
     "condition": {
-      "anyOf": [
+      "description": "Condition to evaluate, the result of which will decide which set of actions to perform.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Condition to evaluate, the result of which will decide which set of actions to perform."
+      ]
     },
     "true": {
-      "type": "array",
-      "items": {},
-      "description": "Optional actions to run if the `condition` evaluated to `true`."
+      "description": "Optional actions to run if the `condition` evaluated to `true`.",
+      "allOf": [
+        {
+          "type": "array",
+          "items": {
+            "$ref": "/chippy-schema/schemas/fsmaction.json"
+          }
+        }
+      ]
     },
     "false": {
-      "type": "array",
-      "items": {},
-      "description": "Optional actions to run if the `condition` evaluated to `false`."
+      "description": "Optional actions to run if the `condition` evaluated to `false`.",
+      "allOf": [
+        {
+          "type": "array",
+          "items": {}
+        }
+      ]
     }
   },
   "required": [

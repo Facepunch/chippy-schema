@@ -4,22 +4,26 @@
   "title": "SpaceUsurper.FsmData",
   "description": "",
   "type": "object",
-  "properties": {
-    "#include": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "precacheTextures": {
-      "type": "array",
-      "items": {
-        "anyOf": [
-          {
-            "$ref": "/chippy-schema/schemas/datapath.json"
+  "patternProperties": {
+    ".*": {
+      "$ref": "#/$defs/state"
+    }
+  },
+  "$defs": {
+    "state": {
+      "anyOf": [
+        {
+          "type": "object",
+          "patternProperties": {
+            ".*": {
+              "$ref": "#/$defs/state"
+            }
           }
-        ]
-      }
+        },
+        {
+          "$ref": "/chippy-schema/schemas/actionlist.json"
+        }
+      ]
     }
   }
 }

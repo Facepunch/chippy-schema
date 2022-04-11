@@ -318,15 +318,19 @@
       ]
     },
     "spawnStartScale": {
-      "anyOf": [
+      "description": "The size at the start of the spawn, that lerps to spawnScale.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/vector2.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
         }
-      ],
-      "description": "The size at the start of the spawn, that lerps to spawnScale."
+      ]
     },
     "fadeInTime": {
       "anyOf": [
@@ -547,8 +551,12 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "onPartDestroyed": {
-      "$ref": "/chippy-schema/schemas/actionlist.json",
-      "description": "Called before PixelGroup.OnDestroy"
+      "description": "Called before PixelGroup.OnDestroy",
+      "allOf": [
+        {
+          "$ref": "/chippy-schema/schemas/actionlist.json"
+        }
+      ]
     },
     "onImplodeStart": {
       "$ref": "/chippy-schema/schemas/actionlist.json"
@@ -590,15 +598,19 @@
       "type": "boolean"
     },
     "alwaysTargetClosestPlayer": {
-      "anyOf": [
+      "description": "If true, always target whichever player is closest (defaults to false).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, always target whichever player is closest (defaults to false)."
+      ]
     },
     "targetPlayerUpdatePeriod": {
       "anyOf": [
@@ -614,15 +626,19 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "allowRetargetWhileCharging": {
-      "anyOf": [
+      "description": "If true, unit can change targets while charging a pattern (defaults to false).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, unit can change targets while charging a pattern (defaults to false)."
+      ]
     },
     "onHitPlayer": {
       "$ref": "/chippy-schema/schemas/actionlist.json"

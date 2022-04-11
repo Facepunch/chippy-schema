@@ -26,8 +26,12 @@
       ]
     },
     "onKeyframe": {
-      "$ref": "/chippy-schema/schemas/actionlist.json",
-      "description": "Actions to run at the start of this keyframe."
+      "description": "Actions to run at the start of this keyframe.",
+      "allOf": [
+        {
+          "$ref": "/chippy-schema/schemas/actionlist.json"
+        }
+      ]
     },
     "#include": {
       "type": "array",
@@ -93,14 +97,29 @@
       ]
     },
     "targetPos": {
-      "anyOf": [
+      "description": "If moveMode is Target, lerp to this position instead of using velocity.",
+      "allOf": [
         {
-          "type": "object",
-          "properties": {
-            "mode": {
-              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+                },
+                "value": {
+                  "anyOf": [
+                    {
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                    },
+                    {
+                      "$ref": "/chippy-schema/schemas/vector2.json"
+                    }
+                  ]
+                }
+              }
             },
-            "value": {
+            {
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/iscriptfunc.json"
@@ -110,20 +129,9 @@
                 }
               ]
             }
-          }
-        },
-        {
-          "anyOf": [
-            {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-            },
-            {
-              "$ref": "/chippy-schema/schemas/vector2.json"
-            }
           ]
         }
-      ],
-      "description": "If moveMode is Target, lerp to this position instead of using velocity."
+      ]
     },
     "posLerpSpeed": {
       "anyOf": [
@@ -158,14 +166,29 @@
       ]
     },
     "moveAngle": {
-      "anyOf": [
+      "description": "Relative to the starting direction (unless useAbsoluteAngles is true).",
+      "allOf": [
         {
-          "type": "object",
-          "properties": {
-            "mode": {
-              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+                },
+                "value": {
+                  "anyOf": [
+                    {
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                    },
+                    {
+                      "$ref": "/chippy-schema/schemas/rotation.json"
+                    }
+                  ]
+                }
+              }
             },
-            "value": {
+            {
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/iscriptfunc.json"
@@ -175,20 +198,9 @@
                 }
               ]
             }
-          }
-        },
-        {
-          "anyOf": [
-            {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-            },
-            {
-              "$ref": "/chippy-schema/schemas/rotation.json"
-            }
           ]
         }
-      ],
-      "description": "Relative to the starting direction (unless useAbsoluteAngles is true)."
+      ]
     },
     "rotationSpeed": {
       "anyOf": [
@@ -831,14 +843,29 @@
       ]
     },
     "opacity": {
-      "anyOf": [
+      "description": "Modifier value for the colors' opacities.",
+      "allOf": [
         {
-          "type": "object",
-          "properties": {
-            "mode": {
-              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+                },
+                "value": {
+                  "anyOf": [
+                    {
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              }
             },
-            "value": {
+            {
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/iscriptfunc.json"
@@ -848,30 +875,34 @@
                 }
               ]
             }
-          }
-        },
-        {
-          "anyOf": [
-            {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-            },
-            {
-              "type": "number"
-            }
           ]
         }
-      ],
-      "description": "Modifier value for the colors' opacities."
+      ]
     },
     "colorBlinkTime": {
-      "anyOf": [
+      "description": "Time it takes to lerp between color1 and color2.",
+      "allOf": [
         {
-          "type": "object",
-          "properties": {
-            "mode": {
-              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+                },
+                "value": {
+                  "anyOf": [
+                    {
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              }
             },
-            "value": {
+            {
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/iscriptfunc.json"
@@ -881,118 +912,73 @@
                 }
               ]
             }
-          }
-        },
-        {
-          "anyOf": [
-            {
-              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-            },
-            {
-              "type": "number"
-            }
           ]
         }
-      ],
-      "description": "Time it takes to lerp between color1 and color2."
+      ]
     },
     "easingType": {
-      "anyOf": [
+      "description": "The easing type used when easing into the next keyframe.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/easingtype.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/easingtype.json"
+            }
+          ]
         }
-      ],
-      "description": "The easing type used when easing into the next keyframe."
+      ]
     },
     "loopStart": {
-      "anyOf": [
+      "description": "Keyframe will be ignored until we are on loop number N or greater.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "Keyframe will be ignored until we are on loop number N or greater."
+      ]
     },
     "loopEnd": {
-      "anyOf": [
+      "description": "Keyframe will be ignored if we are on or past loop number N (non-inclusive).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "Keyframe will be ignored if we are on or past loop number N (non-inclusive)."
+      ]
     },
     "loopModulus": {
-      "anyOf": [
+      "description": "Keyframe active every N loops.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "Keyframe active every N loops."
+      ]
     },
     "chance": {
-      "anyOf": [
-        {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
-        }
-      ],
-      "description": "Chance of using keyframe, from 0 to 1."
-    },
-    "next": {
-      "anyOf": [
-        {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
-        }
-      ],
-      "description": "If this returns a valid frame, goto that frame instead of the next-in-sequence keyframe."
-    },
-    "isPositive": {
-      "anyOf": [
-        {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
-        }
-      ],
-      "description": "Whether the player would generally want to collide with the bullet on this keyframe, and/or would not want to destroy it."
-    },
-    "pixelDamagePercent": {
-      "anyOf": [
-        {
-          "type": "object",
-          "properties": {
-            "mode": {
-              "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
-            },
-            "value": {
-              "anyOf": [
-                {
-                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            }
-          }
-        },
+      "description": "Chance of using keyframe, from 0 to 1.",
+      "allOf": [
         {
           "anyOf": [
             {
@@ -1003,85 +989,179 @@
             }
           ]
         }
-      ],
-      "description": "The percent of max damage the bullet has available this keyframe."
+      ]
+    },
+    "next": {
+      "description": "If this returns a valid frame, goto that frame instead of the next-in-sequence keyframe.",
+      "allOf": [
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
+        }
+      ]
+    },
+    "isPositive": {
+      "description": "Whether the player would generally want to collide with the bullet on this keyframe, and/or would not want to destroy it.",
+      "allOf": [
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
+        }
+      ]
+    },
+    "pixelDamagePercent": {
+      "description": "The percent of max damage the bullet has available this keyframe.",
+      "allOf": [
+        {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
+                },
+                "value": {
+                  "anyOf": [
+                    {
+                      "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "anyOf": [
+                {
+                  "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "ignorePixelCollision": {
-      "anyOf": [
+      "description": "Use when a bullet should start on a pxc without colliding with it until later.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Use when a bullet should start on a pxc without colliding with it until later."
+      ]
     },
     "ignorePlayerCollision": {
-      "anyOf": [
+      "description": "Only applies to this keyframe, unlike the general version of this func which means the bullet can never hit the player.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Only applies to this keyframe, unlike the general version of this func which means the bullet can never hit the player."
+      ]
     },
     "cantBeAffected": {
-      "anyOf": [
+      "description": "If true, not affected by RepelBullets / DestroyBullets / TransformBullets / AffectBulletsInRadius / GetBulletsInRadius / AddForceToBullets.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, not affected by RepelBullets / DestroyBullets / TransformBullets / AffectBulletsInRadius / GetBulletsInRadius / AddForceToBullets."
+      ]
     },
     "proximityEnabled": {
-      "anyOf": [
+      "description": "Whether the bullet should check proximity to target units on this keyframe (true by default).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Whether the bullet should check proximity to target units on this keyframe (true by default)."
+      ]
     },
     "vibrateOnTouchAmount": {
-      "anyOf": [
+      "description": "TODO: only supported by BulletArchetype bullets.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "TODO: only supported by BulletArchetype bullets."
+      ]
     },
     "vibrateOnTouchHorizThreshold": {
-      "anyOf": [
+      "description": "TODO: only supported by BulletArchetype bullets.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "TODO: only supported by BulletArchetype bullets."
+      ]
     },
     "vibrateOnTouchEasingType": {
-      "anyOf": [
+      "description": "TODO: only supported by BulletArchetype bullets.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/easingtype.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/easingtype.json"
+            }
+          ]
         }
-      ],
-      "description": "TODO: only supported by BulletArchetype bullets."
+      ]
     }
   }
 }

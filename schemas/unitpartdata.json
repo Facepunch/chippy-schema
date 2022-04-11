@@ -212,8 +212,12 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "onDestroy": {
-      "$ref": "/chippy-schema/schemas/actionlist.json",
-      "description": "This won't be called on cores for units that use Implode. Called after Unit.OnPartDestroyed"
+      "description": "This won't be called on cores for units that use Implode. Called after Unit.OnPartDestroyed",
+      "allOf": [
+        {
+          "$ref": "/chippy-schema/schemas/actionlist.json"
+        }
+      ]
     },
     "requires": {
       "type": "array",
@@ -327,8 +331,12 @@
       ]
     },
     "dontReactWhenHit": {
-      "type": "boolean",
-      "description": "Set to false if you'd rather call PixelGroup.React() manually."
+      "description": "Set to false if you'd rather call PixelGroup.React() manually.",
+      "allOf": [
+        {
+          "type": "boolean"
+        }
+      ]
     },
     "ropeOpacityNormal": {
       "anyOf": [
@@ -641,15 +649,19 @@
       ]
     },
     "damageThreat": {
-      "anyOf": [
+      "description": "Threat buildup per unit damage. Default:",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Threat buildup per unit damage. Default:"
+      ]
     },
     "#include": {
       "type": "array",

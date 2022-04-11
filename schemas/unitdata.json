@@ -84,26 +84,34 @@
       ]
     },
     "removedPartsDontStopPatterns": {
-      "anyOf": [
+      "description": "If true, parts don't stop active patterns when they are destroyed/removed (defaults to false).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, parts don't stop active patterns when they are destroyed/removed (defaults to false)."
+      ]
     },
     "dontStopPatternsOnImplode": {
-      "anyOf": [
+      "description": "If true, unit doesn't stop patterns when it implodes (defaults to false).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, unit doesn't stop patterns when it implodes (defaults to false)."
+      ]
     },
     "opacityLerpSpeed": {
       "anyOf": [
@@ -324,15 +332,19 @@
       ]
     },
     "useLegacySettings": {
-      "anyOf": [
+      "description": "Only for old replay support.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Only for old replay support."
+      ]
     }
   }
 }

@@ -6,15 +6,19 @@
   "type": "object",
   "properties": {
     "moveSpeedMultiplier": {
-      "anyOf": [
+      "description": "Affects normal velocity and physics forces.///",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Affects normal velocity and physics forces.///"
+      ]
     },
     "moveSpeedMultiplierX": {
       "anyOf": [
@@ -77,15 +81,19 @@
       ]
     },
     "velocityMultiplier": {
-      "anyOf": [
+      "description": "Affects only default velocity, not physics forces.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Affects only default velocity, not physics forces."
+      ]
     },
     "reverseInputPercent": {
       "anyOf": [
@@ -98,26 +106,34 @@
       ]
     },
     "bulletPushPercent": {
-      "anyOf": [
+      "description": "Multiplied with the Player's bulletPushPercent property.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Multiplied with the Player's bulletPushPercent property."
+      ]
     },
     "bulletHitboxLeniency": {
-      "anyOf": [
+      "description": "Multiplied with the Player's bulletHitboxLeniency property.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Multiplied with the Player's bulletHitboxLeniency property."
+      ]
     },
     "damageAmount": {
       "anyOf": [
@@ -130,15 +146,19 @@
       ]
     },
     "intangible": {
-      "anyOf": [
+      "description": "Ignore collision with bullets, pixels, and lasers.///",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Ignore collision with bullets, pixels, and lasers.///"
+      ]
     },
     "ignoreBulletDamage": {
       "anyOf": [
@@ -201,26 +221,34 @@
       ]
     },
     "gunAimSpeedMultiplier": {
-      "anyOf": [
+      "description": "Affects how quickly the player's gun moves to its target angle.///",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Affects how quickly the player's gun moves to its target angle.///"
+      ]
     },
     "gunTargetAngleAmount": {
-      "anyOf": [
+      "description": "Adds to the player guns' target facing angle.///",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Adds to the player guns' target facing angle.///"
+      ]
     },
     "threatMultiplier": {
       "anyOf": [

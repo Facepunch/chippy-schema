@@ -197,15 +197,19 @@
       ]
     },
     "damageThreat": {
-      "anyOf": [
+      "description": "Threat buildup per unit damage. Default:",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Threat buildup per unit damage. Default:"
+      ]
     },
     "#include": {
       "type": "array",

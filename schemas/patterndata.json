@@ -24,8 +24,12 @@
       ]
     },
     "onCharge": {
-      "$ref": "/chippy-schema/schemas/actionlist.json",
-      "description": "Called by PixelGroup, not BulletPattern - you have access to pixelgroup params, not pattern params."
+      "description": "Called by PixelGroup, not BulletPattern - you have access to pixelgroup params, not pattern params.",
+      "allOf": [
+        {
+          "$ref": "/chippy-schema/schemas/actionlist.json"
+        }
+      ]
     },
     "onStart": {
       "$ref": "/chippy-schema/schemas/actionlist.json"
@@ -34,8 +38,12 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "onBullet": {
-      "$ref": "/chippy-schema/schemas/actionlist.json",
-      "description": "Called only once per bullet group in a volley (can contain multiple subdivided bullets)."
+      "description": "Called only once per bullet group in a volley (can contain multiple subdivided bullets).",
+      "allOf": [
+        {
+          "$ref": "/chippy-schema/schemas/actionlist.json"
+        }
+      ]
     },
     "onFinish": {
       "$ref": "/chippy-schema/schemas/actionlist.json"
@@ -44,8 +52,12 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "onEachBullet": {
-      "$ref": "/chippy-schema/schemas/actionlist.json",
-      "description": "Called whenever the pattern creates a new bullet, set to 'currentBullet' property."
+      "description": "Called whenever the pattern creates a new bullet, set to 'currentBullet' property.",
+      "allOf": [
+        {
+          "$ref": "/chippy-schema/schemas/actionlist.json"
+        }
+      ]
     },
     "#include": {
       "type": "array",
@@ -67,142 +79,190 @@
       "type": "string"
     },
     "bullets": {
-      "type": "array",
-      "items": {
-        "anyOf": [
-          {
-            "$ref": "/chippy-schema/schemas/datapath.json"
-          },
-          {
-            "$ref": "/chippy-schema/schemas/bulletdata.json"
+      "description": "The paths of the different bullets used in the pattern.",
+      "allOf": [
+        {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "/chippy-schema/schemas/datapath.json"
+              },
+              {
+                "$ref": "/chippy-schema/schemas/bulletdata.json"
+              }
+            ]
           }
-        ]
-      },
-      "description": "The paths of the different bullets used in the pattern."
+        }
+      ]
     },
     "bulletIndex": {
-      "anyOf": [
+      "description": "Decides which bullet is used for a given shot.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "Decides which bullet is used for a given shot."
+      ]
     },
     "shouldOverrideStatusEffect": {
-      "anyOf": [
+      "description": "Decides if the current bullet should be overridden with a status effect.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Decides if the current bullet should be overridden with a status effect."
+      ]
     },
     "statusPaths": {
-      "type": "array",
-      "items": {
-        "anyOf": [
-          {
-            "$ref": "/chippy-schema/schemas/datapath.json"
-          },
-          {
-            "$ref": "/chippy-schema/schemas/statuseffectdata.json"
+      "description": "The status effects that can be used to override.",
+      "allOf": [
+        {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "/chippy-schema/schemas/datapath.json"
+              },
+              {
+                "$ref": "/chippy-schema/schemas/statuseffectdata.json"
+              }
+            ]
           }
-        ]
-      },
-      "description": "The status effects that can be used to override."
+        }
+      ]
     },
     "statusLevel": {
-      "anyOf": [
+      "description": "The amount of status levels to add. Takes precedence over BulletData.statusLevel.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "The amount of status levels to add. Takes precedence over BulletData.statusLevel."
+      ]
     },
     "shouldUseSingleStatusEffect": {
-      "anyOf": [
+      "description": "Set to true to select from statusPaths instead of assigning all to cycling status bullet.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Set to true to select from statusPaths instead of assigning all to cycling status bullet."
+      ]
     },
     "statusIndex": {
-      "anyOf": [
+      "description": "Which status from statusPaths to use.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "Which status from statusPaths to use."
+      ]
     },
     "patternShape": {
-      "anyOf": [
+      "description": "Spokes: spread bullets out along the arc angle (default = full circle), Custom: specify the position and angle of each bullet.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/patternshape.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/patternshape.json"
+            }
+          ]
         }
-      ],
-      "description": "Spokes: spread bullets out along the arc angle (default = full circle), Custom: specify the position and angle of each bullet."
+      ]
     },
     "numVolleys": {
-      "anyOf": [
+      "description": "The number of volleys to shoot before finishing. If 0, don't stop until the parent tells it to.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "The number of volleys to shoot before finishing. If 0, don't stop until the parent tells it to."
+      ]
     },
     "shootDelay": {
-      "anyOf": [
+      "description": "The amount of time each volley (after the first) will be delayed from the previous volley.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "The amount of time each volley (after the first) will be delayed from the previous volley."
+      ]
     },
     "startDelay": {
-      "anyOf": [
+      "description": "The amount of time the first volley will be delayed.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "The amount of time the first volley will be delayed."
+      ]
     },
     "shouldShoot": {
-      "anyOf": [
+      "description": "Whether the current bullet that will be shot, should actually be shot or not (defaults to true).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Whether the current bullet that will be shot, should actually be shot or not (defaults to true)."
+      ]
     },
     "numBulletsInVolley": {
       "anyOf": [
@@ -215,268 +275,364 @@
       ]
     },
     "arcAngle": {
-      "anyOf": [
+      "description": "What angle to spread spokes over (when 0 or 360, use the whole circle).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "What angle to spread spokes over (when 0 or 360, use the whole circle)."
+      ]
     },
     "arcEasingType": {
-      "anyOf": [
+      "description": "How the bullets in an arc are laid out.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/easingtype.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/easingtype.json"
+            }
+          ]
         }
-      ],
-      "description": "How the bullets in an arc are laid out."
+      ]
     },
     "fanSubdivide": {
-      "anyOf": [
+      "description": "Number of fan bullets each 'spoke' should have.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "Number of fan bullets each 'spoke' should have."
+      ]
     },
     "fanAngle": {
-      "anyOf": [
+      "description": "Degrees between each bullet, only used for fan pattern shape (defaults to 30f).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Degrees between each bullet, only used for fan pattern shape (defaults to 30f)."
+      ]
     },
     "parallelSubdivide": {
-      "anyOf": [
+      "description": "Number of parallel bullets each 'spoke' should have.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "Number of parallel bullets each 'spoke' should have."
+      ]
     },
     "parallelForce": {
-      "anyOf": [
+      "description": "Sideways force to spread out bullets that head in the same direction, only used for parallel pattern shape (applies impulse force to bullets).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Sideways force to spread out bullets that head in the same direction, only used for parallel pattern shape (applies impulse force to bullets)."
+      ]
     },
     "parallelSpread": {
-      "anyOf": [
+      "description": "Sideways spread for bullets that head in the same direction, only used for parallel pattern shape.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Sideways spread for bullets that head in the same direction, only used for parallel pattern shape."
+      ]
     },
     "startAngle": {
-      "anyOf": [
+      "description": "If set, overrides default or target starting angle.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "If set, overrides default or target starting angle."
+      ]
     },
     "angleOffset": {
-      "anyOf": [
+      "description": "Amount of degrees to offset current bullet's angle.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Amount of degrees to offset current bullet's angle."
+      ]
     },
     "positionOffset": {
-      "anyOf": [
+      "description": "Amount to offset current bullet's position.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/vector2.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
         }
-      ],
-      "description": "Amount to offset current bullet's position."
+      ]
     },
     "velocity": {
-      "anyOf": [
+      "description": "Amount to add to bullet's starting velocity.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/vector2.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
         }
-      ],
-      "description": "Amount to add to bullet's starting velocity."
+      ]
     },
     "impulseVelocity": {
-      "anyOf": [
+      "description": "Amount to add to bullet's starting impulse velocity.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/vector2.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
         }
-      ],
-      "description": "Amount to add to bullet's starting impulse velocity."
+      ]
     },
     "bulletSizeMultiplier": {
-      "anyOf": [
+      "description": "Amount to scale each bullet's size by.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Amount to scale each bullet's size by."
+      ]
     },
     "bulletVelocityMultiplier": {
-      "anyOf": [
+      "description": "Amount to scale each bullet's velocity by.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Amount to scale each bullet's velocity by."
+      ]
     },
     "bulletLifetimeMultiplier": {
-      "anyOf": [
+      "description": "Amount to scale each bullet's lifetime by.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Amount to scale each bullet's lifetime by."
+      ]
     },
     "shootDelayMultiplier": {
-      "anyOf": [
+      "description": "Amount to scale the pattern's shootDelay by.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Amount to scale the pattern's shootDelay by."
+      ]
     },
     "numVolleysAddition": {
-      "anyOf": [
+      "description": "Number of volleys to add or subtract.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "Number of volleys to add or subtract."
+      ]
     },
     "numBulletsAddition": {
-      "anyOf": [
+      "description": "Number of bullets to add or subtract from each volley.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "Number of bullets to add or subtract from each volley."
+      ]
     },
     "customPatternPos": {
-      "anyOf": [
+      "description": "The position of the pattern for the current volley, for a custom pattern.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/vector2.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
         }
-      ],
-      "description": "The position of the pattern for the current volley, for a custom pattern."
+      ]
     },
     "customBulletPos": {
-      "anyOf": [
+      "description": "The position of a given bullet in an custom pattern.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/vector2.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
         }
-      ],
-      "description": "The position of a given bullet in an custom pattern."
+      ]
     },
     "customBulletAngle": {
-      "anyOf": [
+      "description": "The angle of a given bullet in an custom pattern.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "The angle of a given bullet in an custom pattern."
+      ]
     },
     "recoil": {
-      "anyOf": [
+      "description": "Force that's applied to the player/unit for each volley. Only applies when Player.AddPattern is called, not for patterns fired from player guns. \"shoot_force\" physics element must be defined.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/vector2.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
         }
-      ],
-      "description": "Force that's applied to the player/unit for each volley. Only applies when Player.AddPattern is called, not for patterns fired from player guns. \"shoot_force\" physics element must be defined."
+      ]
     },
     "torque": {
-      "anyOf": [
+      "description": "Rotation force applied to units.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/vector2.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector2.json"
+            }
+          ]
         }
-      ],
-      "description": "Rotation force applied to units."
+      ]
     },
     "vibrationStrength": {
-      "anyOf": [
+      "description": "Amount to vibrate at position of pattern, each volley.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Amount to vibrate at position of pattern, each volley."
+      ]
     },
     "maxVibrationDist": {
       "anyOf": [
@@ -559,140 +715,192 @@
       ]
     },
     "constantRotation": {
-      "anyOf": [
+      "description": "If true, handle rotation every update, instead of only when firing a volley.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, handle rotation every update, instead of only when firing a volley."
+      ]
     },
     "useRawDeltaTime": {
-      "anyOf": [
+      "description": "Ignore time-scaling.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Ignore time-scaling."
+      ]
     },
     "dragBullets": {
-      "anyOf": [
+      "description": "Whether bullets of this pattern move with the pattern itself in addition to their own movement.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Whether bullets of this pattern move with the pattern itself in addition to their own movement."
+      ]
     },
     "rotateBullets": {
-      "anyOf": [
+      "description": "Whether the rotation of this pattern modifies the position of child bullets.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Whether the rotation of this pattern modifies the position of child bullets."
+      ]
     },
     "rotateBulletAngles": {
-      "anyOf": [
+      "description": "If false, only rotates the position of anchored bullets, not their orientation.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If false, only rotates the position of anchored bullets, not their orientation."
+      ]
     },
     "rotateWithAnchor": {
-      "anyOf": [
+      "description": "Whether rotation applied to the anchor affects this pattern's rotation.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Whether rotation applied to the anchor affects this pattern's rotation."
+      ]
     },
     "useAnchorPos": {
-      "anyOf": [
+      "description": "If true, pattern position is continuously set to anchor position (defaults to true).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, pattern position is continuously set to anchor position (defaults to true)."
+      ]
     },
     "inheritAnchorAngle": {
-      "anyOf": [
+      "description": "Whether this pattern's angle is set to anchor angle, when attached.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "Whether this pattern's angle is set to anchor angle, when attached."
+      ]
     },
     "waitForBulletsToDespawn": {
-      "anyOf": [
+      "description": "If true, wait for all fired bullets to despawn before removing pattern, else only wait until all have been fired.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, wait for all fired bullets to despawn before removing pattern, else only wait until all have been fired."
+      ]
     },
     "despawnChildBulletsWhenFinished": {
-      "anyOf": [
+      "description": "If true, remove all bullets we've fired when we finish for any reason.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, remove all bullets we've fired when we finish for any reason."
+      ]
     },
     "despawnWhenAnchorInactive": {
-      "anyOf": [
+      "description": "If true, remove pattern if the anchor doesn't exist any longer (defaults to true).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, remove pattern if the anchor doesn't exist any longer (defaults to true)."
+      ]
     },
     "attachChildBulletsToBulletAnchor": {
-      "anyOf": [
+      "description": "If true, bullets in this pattern will have their parent bullet set to this pattern's bullet anchor, if it exists.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
+        }
+      ]
+    },
+    "changeTargetPlayerOnDeath": {
+      "description": "In co-op, should this pattern pick a new target player if the old target dies.",
+      "allOf": [
         {
           "type": "boolean"
         }
-      ],
-      "description": "If true, bullets in this pattern will have their parent bullet set to this pattern's bullet anchor, if it exists."
-    },
-    "changeTargetPlayerOnDeath": {
-      "type": "boolean",
-      "description": "In co-op, should this pattern pick a new target player if the old target dies."
+      ]
     },
     "autoUpdateTargetPlayer": {
       "type": "boolean"
@@ -813,157 +1021,216 @@
       ]
     },
     "chargeLookPercent": {
-      "anyOf": [
+      "description": "How far the pattern's anchor core looks in the aim direction while charging.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "How far the pattern's anchor core looks in the aim direction while charging."
+      ]
     },
     "chargeLookLerpPercent": {
-      "anyOf": [
+      "description": "How quickly the pattern's anchor core looks in the aim direction while charging.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "How quickly the pattern's anchor core looks in the aim direction while charging."
+      ]
     },
     "shootTime": {
-      "anyOf": [
+      "description": "How long each shot volley affects the core.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "How long each shot volley affects the core."
+      ]
     },
     "shootLookPercent": {
-      "anyOf": [
+      "description": "How far the pattern's anchor core looks in the aim direction each volley.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "How far the pattern's anchor core looks in the aim direction each volley."
+      ]
     },
     "shootLookLerpPercent": {
-      "anyOf": [
+      "description": "How quickly the pattern's anchor core looks in the aim direction each volley.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "How quickly the pattern's anchor core looks in the aim direction each volley."
+      ]
     },
     "shootFinishLookTime": {
-      "anyOf": [
+      "description": "How long to stay looking in the aim direction after shooting all volleys.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "How long to stay looking in the aim direction after shooting all volleys."
+      ]
     },
     "kickbackTime": {
-      "anyOf": [
+      "description": "How long the kickback lasts for.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "How long the kickback lasts for."
+      ]
     },
     "kickbackPercent": {
-      "anyOf": [
+      "description": "How far in the reverse direction the shootLookPercent is adjusted each volley.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "How far in the reverse direction the shootLookPercent is adjusted each volley."
+      ]
     },
     "kickbackLerpPercent": {
-      "anyOf": [
+      "description": "How fast the kickback lerps.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "How fast the kickback lerps."
+      ]
     },
     "numVolleysPerShootSfx": {
-      "anyOf": [
+      "description": "How many volleys have to happen before playing each shoot sfx.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "How many volleys have to happen before playing each shoot sfx."
+      ]
     },
     "shootEffectPattern": {
-      "description": "The bulletpattern that is fired whenever a volley is shot."
+      "description": "The bulletpattern that is fired whenever a volley is shot.",
+      "allOf": [
+        {}
+      ]
     },
     "hitSelfPixels": {
-      "anyOf": [
+      "description": "If true, bullets in this pattern can collide with the same pxc that spawned it.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, bullets in this pattern can collide with the same pxc that spawned it."
+      ]
     },
     "linkVolleyBullets": {
-      "anyOf": [
+      "description": "If true, all bullets in a volley will despawn if any of them despawn.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, all bullets in a volley will despawn if any of them despawn."
+      ]
     },
     "advanceImmediately": {
-      "anyOf": [
+      "description": "If true, update the bullet pattern immediately (shoot first volley, so subsequent actions can affect its bullets).",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "boolean"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "boolean"
+            }
+          ]
         }
-      ],
-      "description": "If true, update the bullet pattern immediately (shoot first volley, so subsequent actions can affect its bullets)."
+      ]
     },
     "ignoreCollision": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Units that this pattern should ignore collision with."
+      "description": "Units that this pattern should ignore collision with.",
+      "allOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
     },
     "debugVector": {
       "anyOf": [

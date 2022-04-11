@@ -33,9 +33,7 @@
     },
     "inner": {
       "type": "array",
-      "items": {
-        "$ref": "/chippy-schema/schemas/fsmaction.json"
-      }
+      "items": {}
     }
   },
   "required": [

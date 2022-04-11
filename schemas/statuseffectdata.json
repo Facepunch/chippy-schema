@@ -150,26 +150,34 @@
       ]
     },
     "preventDeathPriority": {
-      "anyOf": [
+      "description": "Highest priority shield-items are used first.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "number"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "number"
+            }
+          ]
         }
-      ],
-      "description": "Highest priority shield-items are used first."
+      ]
     },
     "numLevels": {
-      "anyOf": [
+      "description": "When preventing death on a bullet collision, should the bullet be despawned.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "integer"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "integer"
+            }
+          ]
         }
-      ],
-      "description": "When preventing death on a bullet collision, should the bullet be despawned."
+      ]
     },
     "replacesMainGun": {
       "type": "boolean"

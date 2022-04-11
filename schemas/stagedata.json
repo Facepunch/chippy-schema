@@ -105,15 +105,19 @@
       ]
     },
     "cameraStageMargin": {
-      "anyOf": [
+      "description": "If this stage is currently using , controls how much space should be visible to the left, bottom, right and top of the stage bounds.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/vector4.json"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/vector4.json"
+            }
+          ]
         }
-      ],
-      "description": "If this stage is currently using , controls how much space should be visible to the left, bottom, right and top of the stage bounds."
+      ]
     },
     "units": {
       "type": "object",
@@ -165,8 +169,12 @@
       ]
     },
     "enableBulletArchetypes": {
-      "type": "boolean",
-      "description": "If true, use ECS-based bullets where possible."
+      "description": "If true, use ECS-based bullets where possible.",
+      "allOf": [
+        {
+          "type": "boolean"
+        }
+      ]
     },
     "continueWithStage": {
       "anyOf": [
@@ -195,15 +203,19 @@
       }
     },
     "patternDebugText": {
-      "anyOf": [
+      "description": "All patterns display this debug text.",
+      "allOf": [
         {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        },
-        {
-          "type": "string"
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            },
+            {
+              "type": "string"
+            }
+          ]
         }
-      ],
-      "description": "All patterns display this debug text."
+      ]
     }
   }
 }
