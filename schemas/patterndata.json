@@ -1261,5 +1261,16 @@
         }
       ]
     }
+  },
+  "patternProperties": {
+    ".*[bB]ullet$": {
+      "$ref": "/chippy-schema/schemas/bulletdata.json"
+    },
+    "^pow[0-9]+$": {
+      "$ref": "/chippy-schema/schemas/bulletdata.json"
+    },
+    ".*[pP]attern$": {
+      "$ref": "/chippy-schema/schemas/patterndata.json"
+    }
   }
 }

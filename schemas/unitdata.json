@@ -346,5 +346,10 @@
         }
       ]
     }
+  },
+  "patternProperties": {
+    ".*[fF]orm$": {
+      "$ref": "/chippy-schema/schemas/unitformdata.json"
+    }
   }
 }
