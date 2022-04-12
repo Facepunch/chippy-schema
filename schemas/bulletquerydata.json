@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/bulletquerydata.json",
+  "title": "SpaceUsurper.Bullets.BulletQueryData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "include": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<SpaceUsurper.BulletData>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/bulletdata.json"
+          },
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "includePlayerBullets": {
+      "type": "boolean"
+    },
+    "exclude": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<SpaceUsurper.BulletData>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/bulletdata.json"
+          },
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    }
+  }
+}

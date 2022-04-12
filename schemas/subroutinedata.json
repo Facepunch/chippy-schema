@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "parameters": {
+      "title": "Dictionary<string, SpaceUsurper.PropertyData>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -25,6 +26,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"

@@ -9,6 +9,7 @@
       "description": "Affects normal velocity and physics forces.///",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -21,6 +22,7 @@
       ]
     },
     "moveSpeedMultiplierX": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -31,6 +33,7 @@
       ]
     },
     "moveSpeedMultiplierY": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -41,6 +44,7 @@
       ]
     },
     "facingSpeedMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -51,6 +55,7 @@
       ]
     },
     "frictionMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -61,6 +66,7 @@
       ]
     },
     "lookSpeedPercent": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -71,6 +77,7 @@
       ]
     },
     "hitboxRadiusMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -84,6 +91,7 @@
       "description": "Affects only default velocity, not physics forces.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -96,6 +104,7 @@
       ]
     },
     "reverseInputPercent": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -109,6 +118,7 @@
       "description": "Multiplied with the Player's bulletPushPercent property.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -124,6 +134,7 @@
       "description": "Multiplied with the Player's bulletHitboxLeniency property.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -136,6 +147,7 @@
       ]
     },
     "damageAmount": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -149,6 +161,7 @@
       "description": "Ignore collision with bullets, pixels, and lasers.///",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -161,6 +174,7 @@
       ]
     },
     "ignoreBulletDamage": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -171,6 +185,7 @@
       ]
     },
     "ignoreLaserDamage": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -181,6 +196,7 @@
       ]
     },
     "opacityMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -191,6 +207,7 @@
       ]
     },
     "bodyColorA": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -201,6 +218,7 @@
       ]
     },
     "bodyColorB": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -211,6 +229,7 @@
       ]
     },
     "bodyColorC": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -224,6 +243,7 @@
       "description": "Affects how quickly the player's gun moves to its target angle.///",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -239,6 +259,7 @@
       "description": "Adds to the player guns' target facing angle.///",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -251,6 +272,7 @@
       ]
     },
     "threatMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -269,6 +291,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"

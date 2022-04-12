@@ -1,0 +1,510 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/sublayerdata.json",
+  "title": "SpaceUsurper.BackgroundData+SubLayerData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "spawnAngle": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateAngle": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnOffset": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnVelocity": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateVelocity": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnRotateAround": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateRotateAround": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnAngularVelocity": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateAngularVelocity": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnScale": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateScale": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnParallax": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnOpacity": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateOpacity": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnBlinkPeriodA": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnBlinkPeriodB": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnBlinkPeriodC": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateBlinkPeriodA": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateBlinkPeriodB": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateBlinkPeriodC": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnColor1": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateColor1": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnColor2": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateColor2": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnColorA1": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateColorA1": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnColorA2": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateColorA2": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnColorB1": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateColorB1": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnColorB2": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateColorB2": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnColorC1": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateColorC1": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnColorC2": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateColorC2": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnGlow": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateGlow": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnGlowA": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateGlowA": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnGlowB": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateGlowB": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "spawnGlowC": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "updateGlowC": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    }
+  }
+}

@@ -12,6 +12,7 @@
       ]
     },
     "time": {
+      "title": "FsmValue<System.Single>",
       "anyOf": [
         {
           "type": "number"

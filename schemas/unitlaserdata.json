@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "dps": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -16,6 +17,7 @@
       ]
     },
     "startAngle": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -26,6 +28,7 @@
       ]
     },
     "autoRotate": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -36,6 +39,7 @@
       ]
     },
     "rotationSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -46,6 +50,7 @@
       ]
     },
     "aimSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -56,6 +61,7 @@
       ]
     },
     "colorOffA": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -66,6 +72,7 @@
       ]
     },
     "colorOffB": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -76,6 +83,7 @@
       ]
     },
     "colorOnA": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -86,6 +94,7 @@
       ]
     },
     "colorOnB": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -96,6 +105,7 @@
       ]
     },
     "colorBlinkTimeOn": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -106,6 +116,7 @@
       ]
     },
     "colorBlinkTimeOff": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -116,6 +127,7 @@
       ]
     },
     "colorBlinkEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -126,6 +138,7 @@
       ]
     },
     "animSpeedOn": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -136,6 +149,7 @@
       ]
     },
     "animSpeedOff": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -146,6 +160,7 @@
       ]
     },
     "widthAMin": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -156,6 +171,7 @@
       ]
     },
     "widthAMax": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -166,6 +182,7 @@
       ]
     },
     "widthBMin": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -176,6 +193,7 @@
       ]
     },
     "widthBMax": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -186,6 +204,7 @@
       ]
     },
     "numSegments": {
+      "title": "ScriptFunc<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -196,6 +215,7 @@
       ]
     },
     "clampToBounds": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -206,6 +226,7 @@
       ]
     },
     "offsetDistance": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -216,6 +237,7 @@
       ]
     },
     "hitSelfPixels": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -226,6 +248,7 @@
       ]
     },
     "impactPattern": {
+      "title": "DataPath<SpaceUsurper.PatternData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/patterndata.json"
@@ -236,6 +259,7 @@
       ]
     },
     "missOnPattern": {
+      "title": "DataPath<SpaceUsurper.PatternData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/patterndata.json"
@@ -246,6 +270,7 @@
       ]
     },
     "missOffPattern": {
+      "title": "DataPath<SpaceUsurper.PatternData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/patterndata.json"
@@ -256,6 +281,7 @@
       ]
     },
     "length": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -266,6 +292,7 @@
       ]
     },
     "lengthLerpSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -285,6 +312,7 @@
       "$ref": "/chippy-schema/schemas/sfxident.json"
     },
     "setActiveAutomatically": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -303,6 +331,7 @@
     "ignoreCollisionWithPaths": {
       "type": "array",
       "items": {
+        "title": "DataPath<SpaceUsurper.UnitData>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/unitdata.json"
@@ -317,6 +346,7 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "damagePlayer": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -327,6 +357,7 @@
       ]
     },
     "partDamageFactor": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -345,6 +376,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"
@@ -353,6 +385,7 @@
       }
     },
     "impactPatternDelay": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"

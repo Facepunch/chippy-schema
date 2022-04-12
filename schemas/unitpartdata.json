@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "corePath": {
+      "title": "DataPath<SpaceUsurper.CoreData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/coredata.json"
@@ -16,6 +17,7 @@
       ]
     },
     "spritePath": {
+      "title": "DataPath<SpaceUsurper.SpriteData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/spritedata.json"
@@ -29,6 +31,7 @@
       "type": "integer"
     },
     "colorA": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -39,6 +42,7 @@
       ]
     },
     "colorB": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -49,6 +53,7 @@
       ]
     },
     "damagedColorA": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -59,6 +64,7 @@
       ]
     },
     "damagedColorB": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -69,6 +75,7 @@
       ]
     },
     "colorBlinkTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -79,6 +86,7 @@
       ]
     },
     "colorBlinkTimeDamaged": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -89,6 +97,7 @@
       ]
     },
     "hitColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -99,6 +108,7 @@
       ]
     },
     "hitColorDamaged": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -109,6 +119,7 @@
       ]
     },
     "hitColorTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -119,6 +130,7 @@
       ]
     },
     "hitColorEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -129,6 +141,7 @@
       ]
     },
     "isDamageable": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -139,6 +152,7 @@
       ]
     },
     "isProtected": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -149,6 +163,7 @@
       ]
     },
     "shieldPattern": {
+      "title": "DataPath<SpaceUsurper.PatternData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/patterndata.json"
@@ -159,6 +174,7 @@
       ]
     },
     "targetPattern": {
+      "title": "DataPath<SpaceUsurper.PatternData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/patterndata.json"
@@ -190,6 +206,7 @@
       }
     },
     "hp": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -226,6 +243,7 @@
       }
     },
     "progressWeight": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -245,6 +263,7 @@
       "$ref": "/chippy-schema/schemas/sfxident.json"
     },
     "sfxHitPitchFactor": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -255,6 +274,7 @@
       ]
     },
     "patternSfxDistanceMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -271,6 +291,7 @@
       "$ref": "/chippy-schema/schemas/sfxident.json"
     },
     "hitReactPercentMin": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -281,6 +302,7 @@
       ]
     },
     "hitReactPercentMax": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -291,6 +313,7 @@
       ]
     },
     "hitReactTimeMin": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -301,6 +324,7 @@
       ]
     },
     "hitReactTimeMax": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -311,6 +335,7 @@
       ]
     },
     "hitReactEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -321,6 +346,7 @@
       ]
     },
     "hitReactInvulnFactor": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -339,6 +365,7 @@
       ]
     },
     "ropeOpacityNormal": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -349,6 +376,7 @@
       ]
     },
     "ropeOpacityStretched": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -359,6 +387,7 @@
       ]
     },
     "ropeWidthFactorNormal": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -369,6 +398,7 @@
       ]
     },
     "ropeWidthFactorStretched": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -379,6 +409,7 @@
       ]
     },
     "ropeColorStart": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -389,6 +420,7 @@
       ]
     },
     "ropeColorEnd": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -399,6 +431,7 @@
       ]
     },
     "ropeWobbleWidthMin": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -409,6 +442,7 @@
       ]
     },
     "ropeWobbleWidthMax": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -419,6 +453,7 @@
       ]
     },
     "ropeWobbleGlow": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -429,6 +464,7 @@
       ]
     },
     "ropeWobbleEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -439,6 +475,7 @@
       ]
     },
     "ropeWobbleDelayPerNode": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -449,6 +486,7 @@
       ]
     },
     "ropeWobbleOpacityMin": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -459,6 +497,7 @@
       ]
     },
     "ropeWobbleOpacityMax": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -469,6 +508,7 @@
       ]
     },
     "ropeLength": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -479,6 +519,7 @@
       ]
     },
     "ropeLengthEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -489,6 +530,7 @@
       ]
     },
     "ropeNumNodes": {
+      "title": "ScriptFunc<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -499,6 +541,7 @@
       ]
     },
     "ropeTightness": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -509,6 +552,7 @@
       ]
     },
     "ropeNodeTopSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -519,6 +563,7 @@
       ]
     },
     "ropeNodeFrictionMin": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -529,6 +574,7 @@
       ]
     },
     "ropeNodeFrictionMax": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -539,6 +585,7 @@
       ]
     },
     "ropeNodeMass": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -549,6 +596,7 @@
       ]
     },
     "ropeBlockWidthFactor": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -559,6 +607,7 @@
       ]
     },
     "ropeBlockOpacityFactor": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -569,6 +618,7 @@
       ]
     },
     "ropeBlockGlowFactor": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -579,6 +629,7 @@
       ]
     },
     "ropeBlockColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -589,6 +640,7 @@
       ]
     },
     "ropeAnimSpeedNormal": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -599,6 +651,7 @@
       ]
     },
     "ropeAnimSpeedBlock": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -609,6 +662,7 @@
       ]
     },
     "ropeWidthLerpFunc": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -619,6 +673,7 @@
       ]
     },
     "ropeOpacityLerpFunc": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -629,6 +684,7 @@
       ]
     },
     "ropeTightnessLerpFunc": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -639,6 +695,7 @@
       ]
     },
     "ropeGlowAddLerpFunc": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -652,6 +709,7 @@
       "description": "Threat buildup per unit damage. Default:",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -672,6 +730,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"

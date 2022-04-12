@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "bounds": {
+      "title": "ScriptFunc<UnityEngine.Rect>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/rect.json"
@@ -16,6 +17,7 @@
       ]
     },
     "smallArenaClampingModeX": {
+      "title": "ScriptFunc<SpaceUsurper.SmallArenaCameraClampingMode>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/smallarenacameraclampingmode.json"
@@ -26,6 +28,7 @@
       ]
     },
     "smallArenaClampingModeY": {
+      "title": "ScriptFunc<SpaceUsurper.SmallArenaCameraClampingMode>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/smallarenacameraclampingmode.json"
@@ -36,6 +39,7 @@
       ]
     },
     "bgColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -46,6 +50,7 @@
       ]
     },
     "letterboxColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -56,6 +61,7 @@
       ]
     },
     "gridColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -66,6 +72,7 @@
       ]
     },
     "gridSpacing": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -76,6 +83,7 @@
       ]
     },
     "gridThickness": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -86,6 +94,7 @@
       ]
     },
     "gridEdgeWidth": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -96,6 +105,7 @@
       ]
     },
     "gridEdgeWarp": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -106,6 +116,7 @@
       ]
     },
     "gridEdgeScale": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -124,6 +135,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"

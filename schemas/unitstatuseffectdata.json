@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/unitstatuseffectdata.json",
+  "title": "SpaceUsurper.UnitStatusEffectData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "behaviour": {
+      "title": "DataPath<SpaceUsurper.FsmData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/fsmdata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "properties": {
+      "title": "Dictionary<string, SpaceUsurper.PropertyData>",
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/propertydata.json"
+        }
+      }
+    },
+    "displayName": {
+      "title": "ScriptFunc<System.String>",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "modifiers": {
+      "$ref": "/chippy-schema/schemas/statuseffectunitmodifierdata.json"
+    },
+    "numLevels": {
+      "title": "ScriptFunc<System.Int32>",
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "chargeIncrease": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "chargeDecay": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "chargeRequired": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "onEnable": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onMaxedOut": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onLevelUp": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onLevelDown": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDisable": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onUpdate": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onExecute": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "debugVector": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "debugText": {
+      "title": "ScriptFunc<System.String>",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    }
+  }
+}

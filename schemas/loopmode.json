@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/loopmode.json",
+  "title": "SpaceUsurper.LoopMode",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Loop",
+    "PlayOnce",
+    "PingPong",
+    "None"
+  ]
+}

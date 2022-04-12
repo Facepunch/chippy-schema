@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/mirrormode.json",
+  "title": "SpaceUsurper.MirrorMode",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "None",
+    "PatternRot",
+    "BulletAngles",
+    "Both",
+    "DoubleMirrorPatternRot",
+    "DoubleMirrorEach",
+    "DoubleMirrorBulletAngles",
+    "DoubleMirror",
+    "Triple",
+    "Quad"
+  ]
+}

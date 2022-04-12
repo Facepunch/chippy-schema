@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "config": {
+      "title": "DataPath<SpaceUsurper.UnitData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/unitdata.json"
@@ -19,6 +20,7 @@
       "type": "boolean"
     },
     "progressWeight": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -29,6 +31,7 @@
       ]
     },
     "count": {
+      "title": "ScriptFunc<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -39,6 +42,7 @@
       ]
     },
     "requirements": {
+      "title": "Dictionary<string, SpaceUsurper.StageUnitRequirementData[]>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -58,6 +62,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"

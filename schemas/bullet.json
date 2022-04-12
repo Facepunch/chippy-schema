@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/bullet.json",
+  "title": "SpaceUsurper.Bullet",
+  "description": "A projectile produced by a SpaceUsurper.BulletPattern, which can optionally collide with a SpaceUsurper.Player or a SpaceUsurper.Unit."
+}

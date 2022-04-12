@@ -14,6 +14,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"
@@ -28,6 +29,7 @@
       "type": "integer"
     },
     "spritesheetPath": {
+      "title": "DataPath<UnityEngine.Texture2D>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/datapath.json"
@@ -35,6 +37,7 @@
       ]
     },
     "anims": {
+      "title": "Dictionary<string, SpaceUsurper.SpriteAnimData>",
       "type": "object",
       "patternProperties": {
         ".*": {

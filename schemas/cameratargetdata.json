@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/cameratargetdata.json",
+  "title": "SpaceUsurper.PlayerData+CameraTargetData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "center": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "radius": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "smoothness": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "condition": {
+      "title": "ScriptFunc<System.Boolean>",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "enforced": {
+      "title": "ScriptFunc<System.Boolean>",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "priority": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    }
+  }
+}

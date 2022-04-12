@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "properties": {
+      "title": "Dictionary<string, SpaceUsurper.PropertyData>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -14,6 +15,7 @@
       }
     },
     "behaviour": {
+      "title": "DataPath<SpaceUsurper.FsmData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/fsmdata.json"
@@ -68,6 +70,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"
@@ -84,6 +87,7 @@
         {
           "type": "array",
           "items": {
+            "title": "DataPath<SpaceUsurper.BulletData>",
             "anyOf": [
               {
                 "$ref": "/chippy-schema/schemas/bulletdata.json"
@@ -100,6 +104,7 @@
       "description": "Decides which bullet is used for a given shot.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -115,6 +120,7 @@
       "description": "Decides if the current bullet should be overridden with a status effect.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -132,6 +138,7 @@
         {
           "type": "array",
           "items": {
+            "title": "DataPath<SpaceUsurper.StatusEffectData>",
             "anyOf": [
               {
                 "$ref": "/chippy-schema/schemas/statuseffectdata.json"
@@ -148,6 +155,7 @@
       "description": "The amount of status levels to add. Takes precedence over BulletData.statusLevel.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -163,6 +171,7 @@
       "description": "Set to true to select from statusPaths instead of assigning all to cycling status bullet.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -178,6 +187,7 @@
       "description": "Which status from statusPaths to use.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -193,6 +203,7 @@
       "description": "Spokes: spread bullets out along the arc angle (default = full circle), Custom: specify the position and angle of each bullet.",
       "allOf": [
         {
+          "title": "ScriptFunc<SpaceUsurper.PatternShape>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/patternshape.json"
@@ -208,6 +219,7 @@
       "description": "The number of volleys to shoot before finishing. If 0, don't stop until the parent tells it to.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -223,6 +235,7 @@
       "description": "The amount of time each volley (after the first) will be delayed from the previous volley.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -238,6 +251,7 @@
       "description": "The amount of time the first volley will be delayed.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -253,6 +267,7 @@
       "description": "Whether the current bullet that will be shot, should actually be shot or not (defaults to true).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -265,6 +280,7 @@
       ]
     },
     "numBulletsInVolley": {
+      "title": "ScriptFunc<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -278,6 +294,7 @@
       "description": "What angle to spread spokes over (when 0 or 360, use the whole circle).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -293,6 +310,7 @@
       "description": "How the bullets in an arc are laid out.",
       "allOf": [
         {
+          "title": "ScriptFunc<SpaceUsurper.EasingType>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -308,6 +326,7 @@
       "description": "Number of fan bullets each 'spoke' should have.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -323,6 +342,7 @@
       "description": "Degrees between each bullet, only used for fan pattern shape (defaults to 30f).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -338,6 +358,7 @@
       "description": "Number of parallel bullets each 'spoke' should have.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -353,6 +374,7 @@
       "description": "Sideways force to spread out bullets that head in the same direction, only used for parallel pattern shape (applies impulse force to bullets).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -368,6 +390,7 @@
       "description": "Sideways spread for bullets that head in the same direction, only used for parallel pattern shape.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -383,6 +406,7 @@
       "description": "If set, overrides default or target starting angle.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -398,6 +422,7 @@
       "description": "Amount of degrees to offset current bullet's angle.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -413,6 +438,7 @@
       "description": "Amount to offset current bullet's position.",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -428,6 +454,7 @@
       "description": "Amount to add to bullet's starting velocity.",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -443,6 +470,7 @@
       "description": "Amount to add to bullet's starting impulse velocity.",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -458,6 +486,7 @@
       "description": "Amount to scale each bullet's size by.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -473,6 +502,7 @@
       "description": "Amount to scale each bullet's velocity by.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -488,6 +518,7 @@
       "description": "Amount to scale each bullet's lifetime by.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -503,6 +534,7 @@
       "description": "Amount to scale the pattern's shootDelay by.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -518,6 +550,7 @@
       "description": "Number of volleys to add or subtract.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -533,6 +566,7 @@
       "description": "Number of bullets to add or subtract from each volley.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -548,6 +582,7 @@
       "description": "The position of the pattern for the current volley, for a custom pattern.",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -563,6 +598,7 @@
       "description": "The position of a given bullet in an custom pattern.",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -578,6 +614,7 @@
       "description": "The angle of a given bullet in an custom pattern.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -593,6 +630,7 @@
       "description": "Force that's applied to the player/unit for each volley. Only applies when Player.AddPattern is called, not for patterns fired from player guns. \"shoot_force\" physics element must be defined.",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -608,6 +646,7 @@
       "description": "Rotation force applied to units.",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -623,6 +662,7 @@
       "description": "Amount to vibrate at position of pattern, each volley.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -635,6 +675,7 @@
       ]
     },
     "maxVibrationDist": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -645,6 +686,7 @@
       ]
     },
     "vibrationTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -655,6 +697,7 @@
       ]
     },
     "vibrationHorizThreshold": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -665,6 +708,7 @@
       ]
     },
     "vibrationEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -675,6 +719,7 @@
       ]
     },
     "aimMode": {
+      "title": "ScriptFunc<SpaceUsurper.PatternAimMode>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/patternaimmode.json"
@@ -685,6 +730,7 @@
       ]
     },
     "targetAimAngle": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -695,6 +741,7 @@
       ]
     },
     "aimSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -705,6 +752,7 @@
       ]
     },
     "rotationSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -718,6 +766,7 @@
       "description": "If true, handle rotation every update, instead of only when firing a volley.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -733,6 +782,7 @@
       "description": "Ignore time-scaling.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -748,6 +798,7 @@
       "description": "Whether bullets of this pattern move with the pattern itself in addition to their own movement.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -763,6 +814,7 @@
       "description": "Whether the rotation of this pattern modifies the position of child bullets.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -778,6 +830,7 @@
       "description": "If false, only rotates the position of anchored bullets, not their orientation.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -793,6 +846,7 @@
       "description": "Whether rotation applied to the anchor affects this pattern's rotation.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -808,6 +862,7 @@
       "description": "If true, pattern position is continuously set to anchor position (defaults to true).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -823,6 +878,7 @@
       "description": "Whether this pattern's angle is set to anchor angle, when attached.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -838,6 +894,7 @@
       "description": "If true, wait for all fired bullets to despawn before removing pattern, else only wait until all have been fired.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -853,6 +910,7 @@
       "description": "If true, remove all bullets we've fired when we finish for any reason.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -868,6 +926,7 @@
       "description": "If true, remove pattern if the anchor doesn't exist any longer (defaults to true).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -883,6 +942,7 @@
       "description": "If true, bullets in this pattern will have their parent bullet set to this pattern's bullet anchor, if it exists.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -909,6 +969,7 @@
       "type": "boolean"
     },
     "targetPlayerUpdatePeriod": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -928,6 +989,7 @@
       "$ref": "/chippy-schema/schemas/sfxident.json"
     },
     "sfxVolleyVolumeFactor": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -938,6 +1000,7 @@
       ]
     },
     "sfxVolleyPitchFactor": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -948,6 +1011,7 @@
       ]
     },
     "sfxVolleyVoiceLimit": {
+      "title": "ScriptFunc<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -961,6 +1025,7 @@
       "$ref": "/chippy-schema/schemas/sfxident.json"
     },
     "chargeColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -971,6 +1036,7 @@
       ]
     },
     "chargeColorEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -981,6 +1047,7 @@
       ]
     },
     "shootColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -991,6 +1058,7 @@
       ]
     },
     "shootColorTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -1001,6 +1069,7 @@
       ]
     },
     "shootColorEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -1011,6 +1080,7 @@
       ]
     },
     "shootColorPercent": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -1024,6 +1094,7 @@
       "description": "How far the pattern's anchor core looks in the aim direction while charging.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1039,6 +1110,7 @@
       "description": "How quickly the pattern's anchor core looks in the aim direction while charging.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1054,6 +1126,7 @@
       "description": "How long each shot volley affects the core.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1069,6 +1142,7 @@
       "description": "How far the pattern's anchor core looks in the aim direction each volley.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1084,6 +1158,7 @@
       "description": "How quickly the pattern's anchor core looks in the aim direction each volley.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1099,6 +1174,7 @@
       "description": "How long to stay looking in the aim direction after shooting all volleys.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1114,6 +1190,7 @@
       "description": "How long the kickback lasts for.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1129,6 +1206,7 @@
       "description": "How far in the reverse direction the shootLookPercent is adjusted each volley.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1144,6 +1222,7 @@
       "description": "How fast the kickback lerps.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1159,6 +1238,7 @@
       "description": "How many volleys have to happen before playing each shoot sfx.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -1174,6 +1254,7 @@
       "description": "The bulletpattern that is fired whenever a volley is shot.",
       "allOf": [
         {
+          "title": "DataPath<SpaceUsurper.PatternData>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/patterndata.json"
@@ -1189,6 +1270,7 @@
       "description": "If true, bullets in this pattern can collide with the same pxc that spawned it.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -1204,6 +1286,7 @@
       "description": "If true, all bullets in a volley will despawn if any of them despawn.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -1219,6 +1302,7 @@
       "description": "If true, update the bullet pattern immediately (shoot first volley, so subsequent actions can affect its bullets).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -1242,6 +1326,7 @@
       ]
     },
     "debugVector": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -1252,6 +1337,7 @@
       ]
     },
     "debugText": {
+      "title": "ScriptFunc<System.String>",
       "anyOf": [
         {
           "type": "string"

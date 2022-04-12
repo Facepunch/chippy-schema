@@ -12,6 +12,7 @@
       ]
     },
     "value": {
+      "title": "FsmValue<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -22,6 +23,7 @@
       ]
     },
     "cases": {
+      "title": "Dictionary<string, System.Collections.Generic.List<SpaceUsurper.FsmAction>>",
       "type": "object",
       "patternProperties": {
         ".*": {

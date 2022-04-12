@@ -50,6 +50,7 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "bounds": {
+      "title": "ScriptFunc<UnityEngine.Rect>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/rect.json"
@@ -71,6 +72,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"
@@ -85,6 +87,7 @@
       }
     },
     "lifetime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -95,6 +98,7 @@
       ]
     },
     "shouldLoop": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -108,6 +112,7 @@
       "description": "If true, bullet despawns as soon as it runs out of keyframes, regardless of its lifetime.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -126,6 +131,7 @@
       "$ref": "/chippy-schema/schemas/sfxident.json"
     },
     "depthLevel": {
+      "title": "ScriptFunc<SpaceUsurper.DepthLevel>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/depthlevel.json"
@@ -136,6 +142,7 @@
       ]
     },
     "startSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -149,6 +156,7 @@
       "description": "How well the bullet resists being repelled (if unset, it defaults to 1).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -164,6 +172,7 @@
       "description": "Set this to true if something else moves this bullet (eg. parent pattern).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -179,6 +188,7 @@
       "description": "Decides if the current bullet should be overridden with a status effect.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -196,6 +206,7 @@
         {
           "type": "array",
           "items": {
+            "title": "DataPath<SpaceUsurper.StatusEffectData>",
             "anyOf": [
               {
                 "$ref": "/chippy-schema/schemas/statuseffectdata.json"
@@ -212,6 +223,7 @@
       "description": "The amount of status levels to add.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -227,6 +239,7 @@
       "description": "If this bullet has overridden statuses, this is the time to cycle between them.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -245,6 +258,7 @@
       "description": "Extra scale for sprite.",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -260,6 +274,7 @@
       "description": "Amount the sprite is adjusted in forward direction.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -275,6 +290,7 @@
       "description": "Number of extra spritesheet frames to use instead - (N+1)x(N+1) instead of 1x1.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -290,6 +306,7 @@
       "description": "Start with this move angle instead of moving in the pattern's current direction.",
       "allOf": [
         {
+          "title": "ScriptFunc<SpaceUsurper.Rotation>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/rotation.json"
@@ -305,6 +322,7 @@
       "description": "Start with this rotation instead of facing the current direction.",
       "allOf": [
         {
+          "title": "ScriptFunc<SpaceUsurper.Rotation>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/rotation.json"
@@ -320,6 +338,7 @@
       "description": "How quickly the bullet slows down impulse velocity (default is 0.05).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -335,6 +354,7 @@
       "description": "Whether anchored patterns stop when the bullet is finished.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -355,6 +375,7 @@
       ]
     },
     "collideWithPixels": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -368,6 +389,7 @@
       "description": "If true, bullet rotates the direction it checks for collisions with pixels, and doesn't resolve visual overlaps (defaults to false). Used for turrets/drones/etc.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -383,6 +405,7 @@
       "description": "Don't EVER collide with player - for when using bullet as visual effect, or when shot by player.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -398,6 +421,7 @@
       "description": "Ignore time-scaling.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -413,6 +437,7 @@
       "description": "Number of times bullet can reflect before despawning automatically.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -428,6 +453,7 @@
       "description": "Reflect instantly instead of animating.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -440,6 +466,7 @@
       ]
     },
     "despawnStyle": {
+      "title": "ScriptFunc<SpaceUsurper.DespawnStyle>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/despawnstyle.json"
@@ -450,6 +477,7 @@
       ]
     },
     "despawnTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -463,6 +491,7 @@
       "description": "How much force it applies to pxcs it hits (also affected by pixelDamagePercent).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -478,6 +507,7 @@
       "description": "For small bullets, don't have a smaller hitbox than visuals when colliding with player.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -493,6 +523,7 @@
       "description": "Defaults to true.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -524,6 +555,7 @@
       "description": "Used for status bullets - evaluated each frame and powerup cannot be collected while true.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -536,6 +568,7 @@
       ]
     },
     "parallaxSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -546,6 +579,7 @@
       ]
     },
     "cantBeDestroyed": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -559,6 +593,7 @@
       "description": "If true, player's IgnoreBulletDamage property won't prevent bullet's damage or `onHitPlayer` handler.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -574,6 +609,7 @@
       "description": "The color of the bullet when just out of camera bounds (uses current colorA when not set).",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Color>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/color.json"
@@ -589,6 +625,7 @@
       "description": "How much the bullet glows when just out of camera bounds.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -604,6 +641,7 @@
       "description": "How opaque the edges of the border warning are.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -619,6 +657,7 @@
       "description": "How far off camera until this bullet is removed (multiplied by out radius) (defaults to 4f). (also used for border warning range)",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -634,6 +673,7 @@
       "description": "If true, don't disable this bullet based on being outside of arena.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -649,6 +689,7 @@
       "description": "If true, force bullet to be inside its bounds.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -664,6 +705,7 @@
       "description": "If clampToBounds is true, damping of 0 will not affect velocity of clamped bullets, 1 will remove it completely.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -679,6 +721,7 @@
       "description": "Defaults to QuadInOut.",
       "allOf": [
         {
+          "title": "ScriptFunc<SpaceUsurper.EasingType>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -694,6 +737,7 @@
       "description": "So that bullets in the same volley can have different color timing offsets.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -706,6 +750,7 @@
       ]
     },
     "impactPattern": {
+      "title": "DataPath<SpaceUsurper.PatternData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/patterndata.json"
@@ -719,6 +764,7 @@
       "description": "Amount of skew (stretching in forward direction) when bullet traveling at max skew speed.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -734,6 +780,7 @@
       "description": "Distance (per fixed frame) required for full skew.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -746,6 +793,7 @@
       ]
     },
     "circleSkewEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -775,6 +823,7 @@
       "description": "When player is hit by this bullet, which direction should force be applied to player (by default, towards player, away from bullet center).",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -793,6 +842,7 @@
       "type": "boolean"
     },
     "targetPlayerUpdatePeriod": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -811,6 +861,7 @@
       ]
     },
     "updateFloatVar": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -830,6 +881,7 @@
       }
     },
     "proximityRange": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -843,6 +895,7 @@
       "description": "Only for old replay support.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -858,6 +911,7 @@
       "description": "The max amount of damage this bullet can deal.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -873,6 +927,7 @@
       "description": "Damage multiplier when hitting a part instead of a single pixel (default is 1).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -888,6 +943,7 @@
       "description": "If bullet should reflect when hitting a pixel.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -900,6 +956,7 @@
       ]
     },
     "grazeSize": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -913,6 +970,7 @@
       "description": "Amount of force the bullet applies against a grazing player (default is 0.4).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -925,6 +983,7 @@
       ]
     },
     "flipX": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -935,6 +994,7 @@
       ]
     },
     "flipY": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -953,6 +1013,7 @@
       ]
     },
     "debugVector": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -963,6 +1024,7 @@
       ]
     },
     "debugText": {
+      "title": "ScriptFunc<System.String>",
       "anyOf": [
         {
           "type": "string"
@@ -976,6 +1038,7 @@
       "description": "TODO: only supported by BulletArchetype bullets.",
       "allOf": [
         {
+          "title": "ScriptFunc<SpaceUsurper.Rotation>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/rotation.json"
@@ -991,6 +1054,7 @@
       "description": "TODO: only supported by BulletArchetype bullets.",
       "allOf": [
         {
+          "title": "ScriptFunc<SpaceUsurper.Rotation>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/rotation.json"

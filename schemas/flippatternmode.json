@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/flippatternmode.json",
+  "title": "SpaceUsurper.FlipPatternMode",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "None",
+    "CoreHorizontal",
+    "CoreVertical",
+    "CoreDiagonal",
+    "OriginHorizontal",
+    "OriginVertical",
+    "OriginDiagonal",
+    "All"
+  ]
+}

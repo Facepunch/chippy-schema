@@ -8,6 +8,7 @@
     "ranges": {
       "type": "array",
       "items": {
+        "title": "ScriptFunc<System.Collections.Generic.IEnumerable<SpaceUsurper.PixelData>>",
         "anyOf": [
           {
             "type": "array",
@@ -37,6 +38,7 @@
       "$ref": "/chippy-schema/schemas/sfxident.json"
     },
     "hp": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -47,6 +49,7 @@
       ]
     },
     "pixelType": {
+      "title": "ScriptFunc<SpaceUsurper.PixelType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/pixeltype.json"
@@ -57,6 +60,7 @@
       ]
     },
     "isAnchor": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -67,6 +71,7 @@
       ]
     },
     "color": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -77,6 +82,7 @@
       ]
     },
     "damagedColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -87,6 +93,7 @@
       ]
     },
     "hitGlow": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -97,6 +104,7 @@
       ]
     },
     "hitFlashTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -107,6 +115,7 @@
       ]
     },
     "tint": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -117,6 +126,7 @@
       ]
     },
     "deathPattern": {
+      "title": "DataPath<SpaceUsurper.PatternData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/patterndata.json"
@@ -127,6 +137,7 @@
       ]
     },
     "ignoreCollision": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -137,6 +148,7 @@
       ]
     },
     "damagePlayer": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -147,6 +159,7 @@
       ]
     },
     "destroyVibrationStrength": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -157,6 +170,7 @@
       ]
     },
     "isSpawnSource": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -167,6 +181,7 @@
       ]
     },
     "breakaway": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -177,6 +192,7 @@
       ]
     },
     "numDebris": {
+      "title": "ScriptFunc<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -187,6 +203,7 @@
       ]
     },
     "cantBeTransformed": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -200,6 +217,7 @@
       "description": "Threat buildup per unit damage. Default:",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -220,6 +238,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"
@@ -228,6 +247,7 @@
       }
     },
     "range": {
+      "title": "ScriptFunc<System.Collections.Generic.IEnumerable<SpaceUsurper.PixelData>>",
       "anyOf": [
         {
           "type": "array",

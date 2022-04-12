@@ -15,6 +15,7 @@
       "description": "Condition to evaluate, the result of which will decide which set of actions to perform.",
       "allOf": [
         {
+          "title": "FsmValue<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"

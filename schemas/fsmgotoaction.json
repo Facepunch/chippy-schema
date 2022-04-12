@@ -12,6 +12,7 @@
       ]
     },
     "state": {
+      "title": "FsmValue<System.String>",
       "anyOf": [
         {
           "type": "string"

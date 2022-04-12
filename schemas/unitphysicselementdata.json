@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "frictionPercentMin": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -16,6 +17,7 @@
       ]
     },
     "frictionPercentMax": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -26,6 +28,7 @@
       ]
     },
     "topSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -36,6 +39,7 @@
       ]
     },
     "maxSpeedLimit": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -54,6 +58,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"

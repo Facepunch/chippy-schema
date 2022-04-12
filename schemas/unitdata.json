@@ -9,6 +9,7 @@
       "$ref": "/chippy-schema/schemas/category.json"
     },
     "behaviour": {
+      "title": "DataPath<SpaceUsurper.FsmData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/fsmdata.json"
@@ -22,6 +23,7 @@
       "type": "string"
     },
     "properties": {
+      "title": "Dictionary<string, SpaceUsurper.PropertyData>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -30,6 +32,7 @@
       }
     },
     "hiddenColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -43,6 +46,7 @@
       "$ref": "/chippy-schema/schemas/unitmovementdata.json"
     },
     "physicsElements": {
+      "title": "Dictionary<string, SpaceUsurper.UnitPhysicsElementData>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -54,6 +58,7 @@
       "type": "boolean"
     },
     "disableOutOfBounds": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -64,6 +69,7 @@
       ]
     },
     "dormantRange": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -74,6 +80,7 @@
       ]
     },
     "dormantUpdateInterval": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -87,6 +94,7 @@
       "description": "If true, parts don't stop active patterns when they are destroyed/removed (defaults to false).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -102,6 +110,7 @@
       "description": "If true, unit doesn't stop patterns when it implodes (defaults to false).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -114,6 +123,7 @@
       ]
     },
     "opacityLerpSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -124,6 +134,7 @@
       ]
     },
     "overlapTransparency": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -134,6 +145,7 @@
       ]
     },
     "spawnInstantly": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -144,6 +156,7 @@
       ]
     },
     "progressWeight": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -160,6 +173,7 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "debrisAmountMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -170,6 +184,7 @@
       ]
     },
     "debrisSpeedMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -180,6 +195,7 @@
       ]
     },
     "debrisSpeedMinAddition": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -190,6 +206,7 @@
       ]
     },
     "debrisSpeedMaxAddition": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -200,6 +217,7 @@
       ]
     },
     "debrisDragMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -210,6 +228,7 @@
       ]
     },
     "debrisLifetimeMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -220,6 +239,7 @@
       ]
     },
     "debrisSizeMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -230,6 +250,7 @@
       ]
     },
     "explosionPattern": {
+      "title": "DataPath<SpaceUsurper.PatternData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/patterndata.json"
@@ -240,6 +261,7 @@
       ]
     },
     "repelEffect": {
+      "title": "DataPath<SpaceUsurper.BulletData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/bulletdata.json"
@@ -264,6 +286,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"
@@ -272,6 +295,7 @@
       }
     },
     "depthLevel": {
+      "title": "ScriptFunc<SpaceUsurper.DepthLevel>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/depthlevel.json"
@@ -282,6 +306,7 @@
       ]
     },
     "torqueFriction": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -292,6 +317,7 @@
       ]
     },
     "ignoreCollision": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -302,6 +328,7 @@
       ]
     },
     "startFormNum": {
+      "title": "ScriptFunc<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -312,6 +339,7 @@
       ]
     },
     "debugVector": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -322,6 +350,7 @@
       ]
     },
     "debugText": {
+      "title": "ScriptFunc<System.String>",
       "anyOf": [
         {
           "type": "string"
@@ -335,6 +364,7 @@
       "description": "Only for old replay support.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"

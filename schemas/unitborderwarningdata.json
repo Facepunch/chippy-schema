@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "range": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -16,6 +17,7 @@
       ]
     },
     "radius": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -26,6 +28,7 @@
       ]
     },
     "color": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -36,6 +39,7 @@
       ]
     },
     "opacity": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -46,6 +50,7 @@
       ]
     },
     "dotFactorMin": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -56,6 +61,7 @@
       ]
     },
     "posEasing": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -66,6 +72,7 @@
       ]
     },
     "glowEasing": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -84,6 +91,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"

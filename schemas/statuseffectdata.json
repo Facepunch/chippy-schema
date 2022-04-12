@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "category": {
+      "title": "DataPath<SpaceUsurper.StatusEffectCategoryData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/statuseffectcategorydata.json"
@@ -16,6 +17,7 @@
       ]
     },
     "behaviour": {
+      "title": "DataPath<SpaceUsurper.FsmData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/fsmdata.json"
@@ -26,6 +28,7 @@
       ]
     },
     "properties": {
+      "title": "Dictionary<string, SpaceUsurper.PropertyData>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -34,6 +37,7 @@
       }
     },
     "displayName": {
+      "title": "ScriptFunc<System.String>",
       "anyOf": [
         {
           "type": "string"
@@ -44,6 +48,7 @@
       ]
     },
     "description": {
+      "title": "ScriptFunc<System.String>",
       "anyOf": [
         {
           "type": "string"
@@ -54,6 +59,7 @@
       ]
     },
     "shortDescription": {
+      "title": "ScriptFunc<System.String>",
       "anyOf": [
         {
           "type": "string"
@@ -64,6 +70,7 @@
       ]
     },
     "auxText": {
+      "title": "ScriptFunc<System.String>",
       "anyOf": [
         {
           "type": "string"
@@ -74,6 +81,7 @@
       ]
     },
     "auxTextColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -90,6 +98,7 @@
       "$ref": "/chippy-schema/schemas/localizedstring.json"
     },
     "icon": {
+      "title": "DataPath<UnityEngine.Texture2D>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/datapath.json"
@@ -97,6 +106,7 @@
       ]
     },
     "iconColorBlinkTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -107,6 +117,7 @@
       ]
     },
     "iconFlipX": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -117,6 +128,7 @@
       ]
     },
     "iconFlipY": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -127,6 +139,7 @@
       ]
     },
     "iconAngle": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -140,6 +153,7 @@
       "$ref": "/chippy-schema/schemas/statuseffectplayermodifierdata.json"
     },
     "doesPreventDeath": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -153,6 +167,7 @@
       "description": "Highest priority shield-items are used first.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -168,6 +183,7 @@
       "description": "When preventing death on a bullet collision, should the bullet be despawned.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -186,6 +202,7 @@
       "type": "boolean"
     },
     "hideOnPauseMenu": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -202,6 +219,7 @@
       "type": "integer"
     },
     "chargeIncrease": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -212,6 +230,7 @@
       ]
     },
     "chargeDecay": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -222,6 +241,7 @@
       ]
     },
     "chargeRequired": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -288,6 +308,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"
@@ -296,6 +317,7 @@
       }
     },
     "debugVector": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -306,6 +328,7 @@
       ]
     },
     "debugText": {
+      "title": "ScriptFunc<System.String>",
       "anyOf": [
         {
           "type": "string"

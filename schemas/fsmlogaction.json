@@ -15,6 +15,7 @@
       "description": "Message to write.",
       "allOf": [
         {
+          "title": "FsmValue<System.String>",
           "anyOf": [
             {
               "type": "string"

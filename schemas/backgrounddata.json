@@ -1,0 +1,819 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/backgrounddata.json",
+  "title": "SpaceUsurper.BackgroundData",
+  "description": "Configures a background layer of randomly positioned sprites.",
+  "type": "object",
+  "properties": {
+    "subLayers": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/sublayerdata.json"
+      }
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "spawnSpacing": {
+      "description": "Elements will be spawned in a grid with this average horizontal / vertical spacing. If not specified / zero, will spawn only one element.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnPositionVariance": {
+      "description": "Value between 0 and 1 to decide how much to randomize element spawn positions.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "bakeToTexture": {
+      "description": "If true, flatten all elements into a texture after spawning, that will be updated as a single element.",
+      "allOf": [
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "useSpriteAsBakedTexture": {
+      "description": "If true, use the first sprite in  as the baked texture for this background layer. This is an alternative to , that will still use  to render the same image multiple times with different properties.",
+      "allOf": [
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "spawnBounds": {
+      "description": "The area in which to spawn elements. If not specified, will use the current stage bounds.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Rect>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/rect.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "bakedPixelsPerUnit": {
+      "description": "How many rows / columns of pixels per 1x1 area of world space when baking to a texture. TODO: Currently ignored",
+      "allOf": [
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "bakedWorldSize": {
+      "description": "Width / height of area to bake to a texture in world space. Main purpose is to control how soon the texture repeats / tiles. Tune to be as small as possible without seeing noticeable tiling.",
+      "allOf": [
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "shaderFlags": {
+      "description": "Flags to enable in the ShapeInstanced shader for elements of this background.",
+      "allOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "spawnDepthLevel": {
+      "description": "Depth level for this background layer.",
+      "allOf": [
+        {
+          "$ref": "/chippy-schema/schemas/depthlevel.json"
+        }
+      ]
+    },
+    "spawnSprites": {
+      "description": "List of all possible sprite paths.",
+      "allOf": [
+        {
+          "type": "array",
+          "items": {
+            "title": "DataPath<UnityEngine.Texture2D>",
+            "anyOf": [
+              {
+                "$ref": "/chippy-schema/schemas/datapath.json"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "spawnSpriteIndex": {
+      "description": "Index into , evaluated when each element spawns.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Int32>",
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnExtraFrameSize": {
+      "description": "Evaluated when an element spawns to decide its starting extra frame size.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Int32>",
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnAngle": {
+      "description": "Evaluated when an element spawns to decide its starting angle in degrees.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateAngle": {
+      "description": "Evaluated when an element updates to decide its current angle in degrees.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnRadius": {
+      "description": "Evaluated when an element spawns to decide its starting radius. (Default: 1.0)",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateRadius": {
+      "description": "Evaluated when an element updates to decide its current radius.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnParallax": {
+      "description": "Evaluated when an element spawns to decide its starting parallax multiplier.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnOpacity": {
+      "description": "Evaluated when an element spawns to decide its starting opacity. (Default: 1.0)",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateOpacity": {
+      "description": "Evaluated when an element updates to decide its current opacity.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnRotateChannels": {
+      "description": "Only evaluated when  is true. Value modulo 3: 0: RGB -> RGB (no effect) 1: RGB -> GBR 2: RGB -> BRG",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Int32>",
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnBlinkPeriodA": {
+      "description": "Evaluated when an element spawns to decide its starting channel A color blink period.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnBlinkPeriodB": {
+      "description": "Evaluated when an element spawns to decide its starting channel B color blink period.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnBlinkPeriodC": {
+      "description": "Evaluated when an element spawns to decide its starting channel C color blink period.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateBlinkPeriodA": {
+      "description": "Evaluated when an element updates to decide its current channel A color blink period.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateBlinkPeriodB": {
+      "description": "Evaluated when an element updates to decide its current channel B color blink period.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateBlinkPeriodC": {
+      "description": "Evaluated when an element updates to decide its current channel C color blink period.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnColor1": {
+      "description": "Evaluated when an element spawns to decide its starting default color for all channels. Overridden by  etc.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateColor1": {
+      "description": "Evaluated when an element updates to decide its current default color for all channels. Overridden by  etc.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnColor2": {
+      "description": "Evaluated when an element spawns to decide its starting blink color for all channels. Overridden by  etc.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateColor2": {
+      "description": "Evaluated when an element updates to decide its current blink color for all channels. Overridden by  etc.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnColorA1": {
+      "description": "Evaluated when an element spawns to decide its starting channel A default color. (Default: white)",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateColorA1": {
+      "description": "Evaluated when an element updates to decide its current channel A default color.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnColorA2": {
+      "description": "Evaluated when an element spawns to decide its starting channel A blink color. (Default: spawnColorA1)",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateColorA2": {
+      "description": "Evaluated when an element updates to decide its current channel A blink color.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnColorB1": {
+      "description": "Evaluated when an element spawns to decide its starting channel B default color. (Default: clear)",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateColorB1": {
+      "description": "Evaluated when an element updates to decide its current channel B default color.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnColorB2": {
+      "description": "Evaluated when an element spawns to decide its starting channel B blink color. (Default: spawnColorB1)",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateColorB2": {
+      "description": "Evaluated when an element updates to decide its current channel B blink color.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnColorC1": {
+      "description": "Evaluated when an element spawns to decide its starting channel C default color. (Default: clear)",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateColorC1": {
+      "description": "Evaluated when an element updates to decide its current channel C default color.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnColorC2": {
+      "description": "Evaluated when an element spawns to decide its starting channel C blink color. (Default: spawnColorC1)",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateColorC2": {
+      "description": "Evaluated when an element updates to decide its current channel C blink color.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<UnityEngine.Color>",
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnGlow": {
+      "description": "Evaluated when an element spawns to decide its starting glow for all channels. Overridden by  etc.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateGlow": {
+      "description": "Evaluated when an element updates to decide its current glow for all channels. Overridden by  etc.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnGlowA": {
+      "description": "Evaluated when an element spawns to decide its starting channel A glow.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateGlowA": {
+      "description": "Evaluated when an element updates to decide its current channel A glow.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnGlowB": {
+      "description": "Evaluated when an element spawns to decide its starting channel B glow.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateGlowB": {
+      "description": "Evaluated when an element updates to decide its current channel B glow.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnGlowC": {
+      "description": "Evaluated when an element spawns to decide its starting channel C glow.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateGlowC": {
+      "description": "Evaluated when an element updates to decide its current channel C glow.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "spawnFloatVar": {
+      "description": "Initial value of an auxiliary float var shared by all elements.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "updateFloatVar": {
+      "description": "Current value of an auxiliary float var shared by all elements.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

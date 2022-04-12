@@ -12,6 +12,7 @@
       ]
     },
     "target": {
+      "title": "FsmValue<SpaceUsurper.IFsmContainer>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/ifsmcontainer.json"
@@ -22,6 +23,7 @@
       ]
     },
     "path": {
+      "title": "DataPath<SpaceUsurper.SubroutineData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/subroutinedata.json"
@@ -38,6 +40,7 @@
       "type": "boolean"
     },
     "params": {
+      "title": "Dictionary<string, System.Object>",
       "type": "object",
       "patternProperties": {
         ".*": {}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/partselectmode.json",
+  "title": "SpaceUsurper.PartSelectMode",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Next",
+    "All",
+    "NextExisting",
+    "RandomExisting",
+    "NextAlternating"
+  ]
+}

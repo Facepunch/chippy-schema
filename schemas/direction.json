@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/direction.json",
+  "title": "SpaceUsurper.Direction",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Up",
+    "UpLeft",
+    "Left",
+    "DownLeft",
+    "Down",
+    "DownRight",
+    "Right",
+    "UpRight"
+  ]
+}

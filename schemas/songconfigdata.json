@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "properties": {
+      "title": "Dictionary<string, SpaceUsurper.PropertyData>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -14,6 +15,7 @@
       }
     },
     "beatsPerMinute": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -30,6 +32,7 @@
       "type": "boolean"
     },
     "layers": {
+      "title": "Dictionary<string, SpaceUsurper.SongLayerData>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -46,6 +49,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"

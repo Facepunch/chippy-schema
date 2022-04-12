@@ -1,0 +1,606 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/playerdata.json",
+  "title": "SpaceUsurper.PlayerData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "behaviour": {
+      "title": "DataPath<SpaceUsurper.FsmData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/fsmdata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "properties": {
+      "title": "Dictionary<string, SpaceUsurper.PropertyData>",
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/propertydata.json"
+        }
+      }
+    },
+    "corePath": {
+      "title": "DataPath<SpaceUsurper.CoreData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/coredata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "rotateCoreSpeed": {
+      "description": "How fast the core rotates with the player's body (0-1).",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "gun": {
+      "title": "DataPath<SpaceUsurper.PlayerGunData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/playergundata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "reverseAccelerationFactor": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "sprites": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "bodySpriteIndex": {
+      "title": "ScriptFunc<System.Int32>",
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bodyAimSpeed": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bodySize": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bodyWidthModifiers": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bodyColorA": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bodyColorB": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bodyColorC": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bodyOpacity": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bodyOffset": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "hitboxRadius": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "hitboxOpacity": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "hitboxLookDir": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "hitboxLookPercent": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bulletHitboxLeniency": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bulletPushPercent": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "bulletGrazeSizeMultiplier": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "trailColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "trailOpacityEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/easingtype.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "trailNumPoints": {
+      "title": "ScriptFunc<System.Int32>",
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "trailDistancePerPoint": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "trailRemovePointTime": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "trailMaxWidth": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "trailWidthEasingType": {
+      "title": "ScriptFunc<SpaceUsurper.EasingType>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/easingtype.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "trailOffset": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "movement": {
+      "$ref": "/chippy-schema/schemas/unitmovementdata.json"
+    },
+    "physicsElements": {
+      "title": "Dictionary<string, SpaceUsurper.UnitPhysicsElementData>",
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "/chippy-schema/schemas/unitphysicselementdata.json"
+        }
+      }
+    },
+    "pixelAvoidStrength": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "keyboardMoveLerpSpeed": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "keyboardAimLerpSpeed": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "onSpawn": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onUpdate": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onHit": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onHitPixel": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onHitPixelInvulnerable": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onActivateStatus": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDisconnectChunk": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onChunkExplode": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onHitBullet": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onRevive": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "deathTime": {
+      "description": "How long the player takes to die, upon receiving lethal damage.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "deathTimeScale": {
+      "description": "How slow time runs while the player is dying.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "resetTime": {
+      "description": "How soon the stage auto-pauses after game over.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "onDeathStart": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "onDeathFinish": {
+      "$ref": "/chippy-schema/schemas/actionlist.json"
+    },
+    "recoveryInvulnTime": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "hitVelocityDamping": {
+      "description": "How much to reduce velocity when hit [0 = no change (default), 1 = lose all velocity].",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "camLerpSpeed": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "camViewSize": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "camera": {
+      "$ref": "/chippy-schema/schemas/playercameradata.json"
+    },
+    "reviveKeepStatusEffects": {
+      "type": "boolean"
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "debugVector": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "debugText": {
+      "title": "ScriptFunc<System.String>",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "debugStatusEffects": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<SpaceUsurper.StatusEffectData>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/statuseffectdata.json"
+          },
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "useLegacySettings": {
+      "description": "Only for old replay support.",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Boolean>",
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

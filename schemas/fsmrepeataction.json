@@ -12,6 +12,7 @@
       ]
     },
     "count": {
+      "title": "FsmValue<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -22,6 +23,7 @@
       ]
     },
     "delay": {
+      "title": "FsmValue<System.Single>",
       "anyOf": [
         {
           "type": "number"

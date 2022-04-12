@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/statuseffectunitmodifierdata.json",
+  "title": "SpaceUsurper.StatusEffectUnitModifierData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "moveSpeedMultiplier": {
+      "description": "Affects normal velocity and physics forces.///",
+      "allOf": [
+        {
+          "title": "ScriptFunc<System.Single>",
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+            }
+          ]
+        }
+      ]
+    },
+    "facingSpeedMultiplier": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "targetPosLerpSpeedMultiplier": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "rotationSpeedMultiplier": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "frictionMultiplier": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "intangible": {
+      "title": "ScriptFunc<System.Boolean>",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "opacityMultiplier": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "tintColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "tintBlendPercent": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@
     "sprites": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"
@@ -16,6 +17,7 @@
       }
     },
     "spriteIndex": {
+      "title": "ScriptFunc<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -42,6 +44,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"
@@ -50,6 +53,7 @@
       }
     },
     "sprite": {
+      "title": "DataPath<UnityEngine.Texture2D>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/datapath.json"
@@ -57,6 +61,7 @@
       ]
     },
     "duration": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -67,6 +72,7 @@
       ]
     },
     "moveMode": {
+      "title": "ScriptFunc<SpaceUsurper.BulletMoveMode>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/bulletmovemode.json"
@@ -77,6 +83,7 @@
       ]
     },
     "velocityMode": {
+      "title": "ScriptFunc<SpaceUsurper.BulletVelocityMode>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/bulletvelocitymode.json"
@@ -87,6 +94,7 @@
       ]
     },
     "facingMode": {
+      "title": "ScriptFunc<SpaceUsurper.BulletFacingMode>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/bulletfacingmode.json"
@@ -100,6 +108,7 @@
       "description": "If moveMode is Target, lerp to this position instead of using velocity.",
       "allOf": [
         {
+          "title": "KeyframeProperty<UnityEngine.Vector2>",
           "anyOf": [
             {
               "type": "object",
@@ -108,6 +117,7 @@
                   "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
                 },
                 "value": {
+                  "title": "ScriptFunc<UnityEngine.Vector2>",
                   "anyOf": [
                     {
                       "$ref": "/chippy-schema/schemas/vector2.json"
@@ -120,6 +130,7 @@
               }
             },
             {
+              "title": "ScriptFunc<UnityEngine.Vector2>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/vector2.json"
@@ -134,6 +145,7 @@
       ]
     },
     "posLerpSpeed": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -142,6 +154,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -154,6 +167,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -169,6 +183,7 @@
       "description": "Relative to the starting direction (unless useAbsoluteAngles is true).",
       "allOf": [
         {
+          "title": "KeyframeProperty<SpaceUsurper.Rotation>",
           "anyOf": [
             {
               "type": "object",
@@ -177,6 +192,7 @@
                   "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
                 },
                 "value": {
+                  "title": "ScriptFunc<SpaceUsurper.Rotation>",
                   "anyOf": [
                     {
                       "$ref": "/chippy-schema/schemas/rotation.json"
@@ -189,6 +205,7 @@
               }
             },
             {
+              "title": "ScriptFunc<SpaceUsurper.Rotation>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/rotation.json"
@@ -203,6 +220,7 @@
       ]
     },
     "rotationSpeed": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -211,6 +229,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -223,6 +242,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -235,6 +255,7 @@
       ]
     },
     "facingSpeedPercent": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -243,6 +264,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -255,6 +277,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -267,6 +290,7 @@
       ]
     },
     "targetFacingAngle": {
+      "title": "KeyframeProperty<SpaceUsurper.Rotation>",
       "anyOf": [
         {
           "type": "object",
@@ -275,6 +299,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<SpaceUsurper.Rotation>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/rotation.json"
@@ -287,6 +312,7 @@
           }
         },
         {
+          "title": "ScriptFunc<SpaceUsurper.Rotation>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/rotation.json"
@@ -299,6 +325,7 @@
       ]
     },
     "acceleration": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -307,6 +334,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -319,6 +347,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -331,6 +360,7 @@
       ]
     },
     "frictionPercent": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -339,6 +369,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -351,6 +382,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -363,6 +395,7 @@
       ]
     },
     "radius": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -371,6 +404,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -383,6 +417,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -395,6 +430,7 @@
       ]
     },
     "rectSize": {
+      "title": "KeyframeProperty<UnityEngine.Vector2>",
       "anyOf": [
         {
           "type": "object",
@@ -403,6 +439,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<UnityEngine.Vector2>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/vector2.json"
@@ -415,6 +452,7 @@
           }
         },
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -427,6 +465,7 @@
       ]
     },
     "rectWidthMods": {
+      "title": "KeyframeProperty<UnityEngine.Vector2>",
       "anyOf": [
         {
           "type": "object",
@@ -435,6 +474,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<UnityEngine.Vector2>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/vector2.json"
@@ -447,6 +487,7 @@
           }
         },
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -459,6 +500,7 @@
       ]
     },
     "length": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -467,6 +509,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -479,6 +522,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -491,6 +535,7 @@
       ]
     },
     "crossWidth": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -499,6 +544,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -511,6 +557,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -523,6 +570,7 @@
       ]
     },
     "crossDistance": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -531,6 +579,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -543,6 +592,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -555,6 +605,7 @@
       ]
     },
     "colorA1": {
+      "title": "KeyframeProperty<UnityEngine.Color>",
       "anyOf": [
         {
           "type": "object",
@@ -563,6 +614,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<UnityEngine.Color>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/color.json"
@@ -575,6 +627,7 @@
           }
         },
         {
+          "title": "ScriptFunc<UnityEngine.Color>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/color.json"
@@ -587,6 +640,7 @@
       ]
     },
     "colorA2": {
+      "title": "KeyframeProperty<UnityEngine.Color>",
       "anyOf": [
         {
           "type": "object",
@@ -595,6 +649,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<UnityEngine.Color>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/color.json"
@@ -607,6 +662,7 @@
           }
         },
         {
+          "title": "ScriptFunc<UnityEngine.Color>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/color.json"
@@ -619,6 +675,7 @@
       ]
     },
     "colorB1": {
+      "title": "KeyframeProperty<UnityEngine.Color>",
       "anyOf": [
         {
           "type": "object",
@@ -627,6 +684,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<UnityEngine.Color>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/color.json"
@@ -639,6 +697,7 @@
           }
         },
         {
+          "title": "ScriptFunc<UnityEngine.Color>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/color.json"
@@ -651,6 +710,7 @@
       ]
     },
     "colorB2": {
+      "title": "KeyframeProperty<UnityEngine.Color>",
       "anyOf": [
         {
           "type": "object",
@@ -659,6 +719,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<UnityEngine.Color>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/color.json"
@@ -671,6 +732,7 @@
           }
         },
         {
+          "title": "ScriptFunc<UnityEngine.Color>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/color.json"
@@ -683,6 +745,7 @@
       ]
     },
     "colorC1": {
+      "title": "KeyframeProperty<UnityEngine.Color>",
       "anyOf": [
         {
           "type": "object",
@@ -691,6 +754,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<UnityEngine.Color>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/color.json"
@@ -703,6 +767,7 @@
           }
         },
         {
+          "title": "ScriptFunc<UnityEngine.Color>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/color.json"
@@ -715,6 +780,7 @@
       ]
     },
     "colorC2": {
+      "title": "KeyframeProperty<UnityEngine.Color>",
       "anyOf": [
         {
           "type": "object",
@@ -723,6 +789,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<UnityEngine.Color>",
               "anyOf": [
                 {
                   "$ref": "/chippy-schema/schemas/color.json"
@@ -735,6 +802,7 @@
           }
         },
         {
+          "title": "ScriptFunc<UnityEngine.Color>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/color.json"
@@ -747,6 +815,7 @@
       ]
     },
     "glowA": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -755,6 +824,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -767,6 +837,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -779,6 +850,7 @@
       ]
     },
     "glowB": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -787,6 +859,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -799,6 +872,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -811,6 +885,7 @@
       ]
     },
     "glowC": {
+      "title": "KeyframeProperty<System.Single>",
       "anyOf": [
         {
           "type": "object",
@@ -819,6 +894,7 @@
               "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
             },
             "value": {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -831,6 +907,7 @@
           }
         },
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -846,6 +923,7 @@
       "description": "Modifier value for the colors' opacities.",
       "allOf": [
         {
+          "title": "KeyframeProperty<System.Single>",
           "anyOf": [
             {
               "type": "object",
@@ -854,6 +932,7 @@
                   "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
                 },
                 "value": {
+                  "title": "ScriptFunc<System.Single>",
                   "anyOf": [
                     {
                       "type": "number"
@@ -866,6 +945,7 @@
               }
             },
             {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -883,6 +963,7 @@
       "description": "Time it takes to lerp between color1 and color2.",
       "allOf": [
         {
+          "title": "KeyframeProperty<System.Single>",
           "anyOf": [
             {
               "type": "object",
@@ -891,6 +972,7 @@
                   "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
                 },
                 "value": {
+                  "title": "ScriptFunc<System.Single>",
                   "anyOf": [
                     {
                       "type": "number"
@@ -903,6 +985,7 @@
               }
             },
             {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -920,6 +1003,7 @@
       "description": "The easing type used when easing into the next keyframe.",
       "allOf": [
         {
+          "title": "ScriptFunc<SpaceUsurper.EasingType>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/easingtype.json"
@@ -935,6 +1019,7 @@
       "description": "Keyframe will be ignored until we are on loop number N or greater.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -950,6 +1035,7 @@
       "description": "Keyframe will be ignored if we are on or past loop number N (non-inclusive).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -965,6 +1051,7 @@
       "description": "Keyframe active every N loops.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -980,6 +1067,7 @@
       "description": "Chance of using keyframe, from 0 to 1.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -995,6 +1083,7 @@
       "description": "If this returns a valid frame, goto that frame instead of the next-in-sequence keyframe.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Int32>",
           "anyOf": [
             {
               "type": "integer"
@@ -1010,6 +1099,7 @@
       "description": "Whether the player would generally want to collide with the bullet on this keyframe, and/or would not want to destroy it.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -1025,6 +1115,7 @@
       "description": "The percent of max damage the bullet has available this keyframe.",
       "allOf": [
         {
+          "title": "KeyframeProperty<System.Single>",
           "anyOf": [
             {
               "type": "object",
@@ -1033,6 +1124,7 @@
                   "$ref": "/chippy-schema/schemas/keyframepropertymode.json"
                 },
                 "value": {
+                  "title": "ScriptFunc<System.Single>",
                   "anyOf": [
                     {
                       "type": "number"
@@ -1045,6 +1137,7 @@
               }
             },
             {
+              "title": "ScriptFunc<System.Single>",
               "anyOf": [
                 {
                   "type": "number"
@@ -1062,6 +1155,7 @@
       "description": "Use when a bullet should start on a pxc without colliding with it until later.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -1077,6 +1171,7 @@
       "description": "Only applies to this keyframe, unlike the general version of this func which means the bullet can never hit the player.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -1092,6 +1187,7 @@
       "description": "If true, not affected by RepelBullets / DestroyBullets / TransformBullets / AffectBulletsInRadius / GetBulletsInRadius / AddForceToBullets.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -1107,6 +1203,7 @@
       "description": "Whether the bullet should check proximity to target units on this keyframe (true by default).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -1122,6 +1219,7 @@
       "description": "TODO: only supported by BulletArchetype bullets.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1137,6 +1235,7 @@
       "description": "TODO: only supported by BulletArchetype bullets.",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Single>",
           "anyOf": [
             {
               "type": "number"
@@ -1152,6 +1251,7 @@
       "description": "TODO: only supported by BulletArchetype bullets.",
       "allOf": [
         {
+          "title": "ScriptFunc<SpaceUsurper.EasingType>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/easingtype.json"

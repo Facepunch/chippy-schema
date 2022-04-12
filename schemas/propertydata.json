@@ -9,6 +9,7 @@
       "type": "string"
     },
     "path": {
+      "title": "DataPath<SpaceUsurper.PropertyContainerData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/propertycontainerdata.json"

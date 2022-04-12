@@ -6,6 +6,7 @@
   "type": "object",
   "properties": {
     "moveMode": {
+      "title": "ScriptFunc<SpaceUsurper.UnitMovementMode>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/unitmovementmode.json"
@@ -16,6 +17,7 @@
       ]
     },
     "accelVector": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -26,6 +28,7 @@
       ]
     },
     "targetPos": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -36,6 +39,7 @@
       ]
     },
     "posLerpSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -46,6 +50,7 @@
       ]
     },
     "facingMode": {
+      "title": "ScriptFunc<SpaceUsurper.UnitFacingMode>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/unitfacingmode.json"
@@ -56,6 +61,7 @@
       ]
     },
     "targetFacingAngle": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -66,6 +72,7 @@
       ]
     },
     "facingLerpSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -76,6 +83,7 @@
       ]
     },
     "rotationSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -86,6 +94,7 @@
       ]
     },
     "bounds": {
+      "title": "ScriptFunc<UnityEngine.Rect>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/rect.json"
@@ -108,6 +117,7 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "stayInBoundsStrength": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -118,6 +128,7 @@
       ]
     },
     "stayInBoundsStrengthLeft": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -128,6 +139,7 @@
       ]
     },
     "stayInBoundsStrengthRight": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -138,6 +150,7 @@
       ]
     },
     "stayInBoundsStrengthDown": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -148,6 +161,7 @@
       ]
     },
     "stayInBoundsStrengthUp": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -158,6 +172,7 @@
       ]
     },
     "startOpacity": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -168,6 +183,7 @@
       ]
     },
     "bgFadeInColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -178,6 +194,7 @@
       ]
     },
     "bgFadeOutColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -188,6 +205,7 @@
       ]
     },
     "chunkColorStart": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -198,6 +216,7 @@
       ]
     },
     "chunkColorFinish": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -208,6 +227,7 @@
       ]
     },
     "chunkSizeFinish": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -218,6 +238,7 @@
       ]
     },
     "chunkVelocity": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -228,6 +249,7 @@
       ]
     },
     "chunkGlobalVelocity": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -238,6 +260,7 @@
       ]
     },
     "chunkRotationSpeed": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -248,6 +271,7 @@
       ]
     },
     "chunkRotationFriction": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -258,6 +282,7 @@
       ]
     },
     "chunkMovementFriction": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -268,6 +293,7 @@
       ]
     },
     "chunkLifetimeMultiplier": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -278,6 +304,7 @@
       ]
     },
     "spawnPos": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -288,6 +315,7 @@
       ]
     },
     "spawnDelay": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -298,6 +326,7 @@
       ]
     },
     "dontAutoSpawn": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -308,6 +337,7 @@
       ]
     },
     "spawnScale": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -321,6 +351,7 @@
       "description": "The size at the start of the spawn, that lerps to spawnScale.",
       "allOf": [
         {
+          "title": "ScriptFunc<UnityEngine.Vector2>",
           "anyOf": [
             {
               "$ref": "/chippy-schema/schemas/vector2.json"
@@ -333,6 +364,7 @@
       ]
     },
     "fadeInTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -343,6 +375,7 @@
       ]
     },
     "fadeOutTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -353,6 +386,7 @@
       ]
     },
     "bgColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -363,6 +397,7 @@
       ]
     },
     "bgOpacity": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -373,6 +408,7 @@
       ]
     },
     "disconnectBgColor": {
+      "title": "ScriptFunc<UnityEngine.Color>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/color.json"
@@ -383,6 +419,7 @@
       ]
     },
     "disconnectBgTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -393,6 +430,7 @@
       ]
     },
     "disconnectBgReqNumPixels": {
+      "title": "ScriptFunc<System.Int32>",
       "anyOf": [
         {
           "type": "integer"
@@ -403,6 +441,7 @@
       ]
     },
     "dontErodePixelChunks": {
+      "title": "ScriptFunc<System.Boolean>",
       "anyOf": [
         {
           "type": "boolean"
@@ -413,6 +452,7 @@
       ]
     },
     "pixelChunkDepthLevel": {
+      "title": "ScriptFunc<SpaceUsurper.DepthLevel>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/depthlevel.json"
@@ -423,6 +463,7 @@
       ]
     },
     "coreSpawnTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -433,6 +474,7 @@
       ]
     },
     "pixelSpawnTimeStart": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -443,6 +485,7 @@
       ]
     },
     "pixelSpawnTimeEnd": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -453,6 +496,7 @@
       ]
     },
     "pxcSource": {
+      "title": "DataPath<SpaceUsurper.PxcSourceData>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/pxcsourcedata.json"
@@ -466,6 +510,7 @@
       "type": "string"
     },
     "anims": {
+      "title": "Dictionary<string, SpaceUsurper.UnitAnimData>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -474,6 +519,7 @@
       }
     },
     "baseHp": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -484,6 +530,7 @@
       ]
     },
     "progressWeight": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -494,6 +541,7 @@
       ]
     },
     "progress": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -510,6 +558,7 @@
       }
     },
     "parts": {
+      "title": "Dictionary<string, SpaceUsurper.UnitPartData>",
       "type": "object",
       "patternProperties": {
         ".*": {
@@ -601,6 +650,7 @@
       "description": "If true, always target whichever player is closest (defaults to false).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -613,6 +663,7 @@
       ]
     },
     "targetPlayerUpdatePeriod": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -629,6 +680,7 @@
       "description": "If true, unit can change targets while charging a pattern (defaults to false).",
       "allOf": [
         {
+          "title": "ScriptFunc<System.Boolean>",
           "anyOf": [
             {
               "type": "boolean"
@@ -647,6 +699,7 @@
       "$ref": "/chippy-schema/schemas/actionlist.json"
     },
     "implodeTime": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -669,6 +722,7 @@
       }
     },
     "pixelOffset": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
       "anyOf": [
         {
           "$ref": "/chippy-schema/schemas/vector2.json"
@@ -679,6 +733,7 @@
       ]
     },
     "avoidUnitStrength": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -689,6 +744,7 @@
       ]
     },
     "repelUnitStrength": {
+      "title": "ScriptFunc<System.Single>",
       "anyOf": [
         {
           "type": "number"
@@ -707,6 +763,7 @@
     "precacheTextures": {
       "type": "array",
       "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
         "anyOf": [
           {
             "$ref": "/chippy-schema/schemas/datapath.json"

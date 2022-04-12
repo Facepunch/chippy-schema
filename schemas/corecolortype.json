@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/corecolortype.json",
+  "title": "SpaceUsurper.CoreColorType",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Tint",
+    "Charge",
+    "Shoot"
+  ]
+}
