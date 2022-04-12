@@ -323,6 +323,9 @@
     "^pow[0-9]+$": {
       "$ref": "/chippy-schema/schemas/bulletdata.json"
     },
+    "^[0-9]+$": {
+      "$ref": "/chippy-schema/schemas/patterndata.json"
+    },
     ".*[pP]attern$": {
       "$ref": "/chippy-schema/schemas/patterndata.json"
     }
