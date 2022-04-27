@@ -3818,6 +3818,134 @@
       "properties": {
         "target": {
           "enum": [
+            "stage.PlayerHandler"
+          ]
+        }
+      },
+      "anyOf": [
+        {
+          "properties": {
+            "method": {
+              "enum": [
+                "GetLastDyingPlayer"
+              ]
+            },
+            "params": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        },
+        {
+          "properties": {
+            "method": {
+              "enum": [
+                "GetClosestPlayer"
+              ]
+            },
+            "params": {
+              "type": "object",
+              "properties": {
+                "pos": {
+                  "$ref": "/chippy-schema/schemas/vector2.json"
+                },
+                "preferAlive": {
+                  "type": "boolean"
+                },
+                "preferNonZeroThreat": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "pos"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "method": {
+              "enum": [
+                "GetRandomPlayerWeighted"
+              ]
+            },
+            "params": {
+              "type": "object",
+              "properties": {
+                "pos": {
+                  "$ref": "/chippy-schema/schemas/vector2.json"
+                },
+                "rand": {
+                  "$ref": "/chippy-schema/schemas/rand.json"
+                }
+              },
+              "required": [
+                "pos",
+                "rand"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "method": {
+              "enum": [
+                "GetFirstExistingPlayer"
+              ]
+            },
+            "params": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        },
+        {
+          "properties": {
+            "method": {
+              "enum": [
+                "Vibrate"
+              ]
+            },
+            "params": {
+              "type": "object",
+              "properties": {
+                "pos": {
+                  "$ref": "/chippy-schema/schemas/vector2.json"
+                },
+                "strength": {
+                  "type": "number"
+                },
+                "maxDist": {
+                  "type": "number"
+                },
+                "time": {
+                  "type": "number"
+                },
+                "horizThreshold": {
+                  "type": "number"
+                },
+                "easingType": {
+                  "$ref": "/chippy-schema/schemas/easingtype.json"
+                }
+              },
+              "required": [
+                "pos",
+                "strength",
+                "maxDist",
+                "time",
+                "horizThreshold"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "properties": {
+        "target": {
+          "enum": [
             "player"
           ]
         }

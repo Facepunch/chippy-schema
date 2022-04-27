@@ -42,5 +42,13 @@
   },
   "required": [
     "action"
-  ]
+  ],
+  "patternProperties": {
+    "\\.sub$": {
+      "$ref": "/chippy-schema/schemas/subroutinedata.json"
+    },
+    "[fF]sm$": {
+      "$ref": "/chippy-schema/schemas/fsmdata.json"
+    }
+  }
 }
