@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/sfxdata.json",
+  "title": "SpaceUsurper.SfxData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "fileName": {
+      "title": "DataPath<UnityEngine.AudioClip>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "fileNames": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.AudioClip>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "volume": {
+      "type": "number"
+    },
+    "pitchMin": {
+      "type": "number"
+    },
+    "pitchMax": {
+      "type": "number"
+    },
+    "maxDistance": {
+      "type": "number"
+    },
+    "spatialBlend": {
+      "type": "number"
+    },
+    "stereoBlend": {
+      "type": "number"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "unique": {
+      "type": "boolean"
+    }
+  }
+}

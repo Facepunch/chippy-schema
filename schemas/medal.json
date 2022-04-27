@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/medal.json",
+  "title": "SpaceUsurper.Medal",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "None",
+    "Bronze",
+    "Silver",
+    "Gold",
+    "Victory",
+    "Warning"
+  ]
+}

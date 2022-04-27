@@ -2,5 +2,30 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/stageplayerdata.json",
   "title": "SpaceUsurper.StagePlayerData",
-  "description": ""
+  "description": "",
+  "type": "object",
+  "properties": {
+    "path": {
+      "title": "DataPath<SpaceUsurper.PlayerData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/playerdata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "spawnPos": {
+      "title": "ScriptFunc<UnityEngine.Vector2>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/vector2.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    }
+  }
 }

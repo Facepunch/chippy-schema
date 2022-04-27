@@ -2,39 +2,5 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/fsmwaitaction.json",
   "title": "SpaceUsurper.FsmWaitAction",
-  "description": "",
-  "type": "object",
-  "properties": {
-    "action": {
-      "type": "string",
-      "enum": [
-        "Wait"
-      ]
-    },
-    "time": {
-      "title": "FsmValue<System.Single>",
-      "anyOf": [
-        {
-          "type": "number"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        }
-      ]
-    },
-    "cantBeDelayed": {
-      "type": "boolean"
-    }
-  },
-  "required": [
-    "action"
-  ],
-  "patternProperties": {
-    "\\.sub$": {
-      "$ref": "/chippy-schema/schemas/subroutinedata.json"
-    },
-    "[fF]sm$": {
-      "$ref": "/chippy-schema/schemas/fsmdata.json"
-    }
-  }
+  "description": ""
 }

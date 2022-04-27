@@ -2,5 +2,36 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/loadingtipdata.json",
   "title": "SpaceUsurper.LoadingTipData",
-  "description": ""
+  "description": "",
+  "type": "object",
+  "properties": {
+    "include": {
+      "title": "DataPath<SpaceUsurper.LoadingTipListData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/loadingtiplistdata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "condition": {
+      "title": "ScriptFunc<System.Boolean>",
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "message": {
+      "$ref": "/chippy-schema/schemas/localizedstring.json"
+    },
+    "weight": {
+      "type": "number"
+    }
+  }
 }

@@ -2,5 +2,26 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitpartplacementdata.json",
   "title": "SpaceUsurper.UnitPartPlacementData",
-  "description": ""
+  "description": "",
+  "type": "object",
+  "properties": {
+    "size": {
+      "type": "integer"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "area": {
+      "type": "integer"
+    },
+    "start": {
+      "type": "integer"
+    },
+    "end": {
+      "type": "integer"
+    }
+  }
 }

@@ -1,21 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/chippy-schema/schemas/subroutinedata.json",
-  "title": "SpaceUsurper.SubroutineData",
+  "$id": "/chippy-schema/schemas/rawjsondata.json",
+  "title": "SpaceUsurper.RawJsonData",
   "description": "",
   "type": "object",
   "properties": {
-    "parameters": {
-      "title": "Dictionary<string, SpaceUsurper.PropertyData>",
-      "type": "object",
-      "patternProperties": {
-        ".*": {
-          "$ref": "/chippy-schema/schemas/propertydata.json"
-        }
-      }
-    },
-    "actions": {
-      "$ref": "/chippy-schema/schemas/actionlist.json"
+    "Token": {
+      "$ref": "/chippy-schema/schemas/jtoken.json"
     },
     "#include": {
       "type": "array",

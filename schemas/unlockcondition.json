@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/unlockcondition.json",
+  "title": "SpaceUsurper.UnlockCondition",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "type": {
+      "$ref": "/chippy-schema/schemas/unlockconditiontype.json"
+    },
+    "stage": {
+      "title": "DataPath<SpaceUsurper.StageData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/stagedata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "campaign": {
+      "title": "DataPath<SpaceUsurper.CampaignData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/campaigndata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "medal": {
+      "$ref": "/chippy-schema/schemas/medal.json"
+    },
+    "flag": {
+      "type": "string"
+    },
+    "statistic": {
+      "$ref": "/chippy-schema/schemas/statistic.json"
+    },
+    "threshold": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/unlockcondition.json"
+      }
+    }
+  }
+}

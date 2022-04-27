@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/campaigndata.json",
+  "title": "SpaceUsurper.CampaignData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "title": {
+      "$ref": "/chippy-schema/schemas/localizedstring.json"
+    },
+    "description": {
+      "$ref": "/chippy-schema/schemas/localizedstring.json"
+    },
+    "nexRankingId": {
+      "$ref": "/chippy-schema/schemas/nexrankingid.json"
+    },
+    "disableCampaignLeaderboard": {
+      "type": "boolean"
+    },
+    "enableFlags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "category": {
+      "type": "string"
+    },
+    "hideInEditor": {
+      "type": "boolean"
+    },
+    "invisibleWhenLocked": {
+      "type": "boolean"
+    },
+    "backColor": {
+      "description": "Background tint in the main menu for this campaign. Default: #2A2A72",
+      "allOf": [
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      ]
+    },
+    "subtitleColor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/campaignstagedata.json"
+      }
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    }
+  },
+  "patternProperties": {
+    "[bB]ullet$": {
+      "$ref": "/chippy-schema/schemas/bulletdata.json"
+    },
+    "[pP]attern$": {
+      "$ref": "/chippy-schema/schemas/patterndata.json"
+    }
+  }
+}

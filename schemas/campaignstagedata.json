@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/campaignstagedata.json",
+  "title": "SpaceUsurper.CampaignStageData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "stage": {
+      "title": "DataPath<SpaceUsurper.StageData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/stagedata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    },
+    "unlockCondition": {
+      "description": "Conditions to decide if this stage is unlocked. If not specified, stage is unlocked if either:",
+      "allOf": [
+        {
+          "$ref": "/chippy-schema/schemas/unlockcondition.json"
+        }
+      ]
+    },
+    "unlockConditionText": {
+      "$ref": "/chippy-schema/schemas/localizedstring.json"
+    },
+    "alreadyUnlocked": {
+      "description": "This stage should already be in an unlocked state, without the player needing to press the unlock button.",
+      "allOf": [
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "hideInRelease": {
+      "type": "boolean"
+    }
+  }
+}

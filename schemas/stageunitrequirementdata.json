@@ -2,5 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/stageunitrequirementdata.json",
   "title": "SpaceUsurper.StageUnitRequirementData",
-  "description": ""
+  "description": "",
+  "type": "object",
+  "properties": {
+    "unit": {
+      "type": "string"
+    },
+    "form": {
+      "type": "integer"
+    },
+    "parts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
 }

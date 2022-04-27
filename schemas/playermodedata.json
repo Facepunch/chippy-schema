@@ -2,5 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/playermodedata.json",
   "title": "SpaceUsurper.StageData+PlayerModeData",
-  "description": ""
+  "description": "",
+  "type": "object",
+  "properties": {
+    "players": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/stageplayerdata.json"
+      }
+    },
+    "playerCount": {
+      "type": "integer"
+    },
+    "cameraMode": {
+      "$ref": "/chippy-schema/schemas/cameramode.json"
+    }
+  }
 }

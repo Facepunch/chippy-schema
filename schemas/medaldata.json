@@ -2,5 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/medaldata.json",
   "title": "SpaceUsurper.MedalData",
-  "description": ""
+  "description": "",
+  "type": "object",
+  "properties": {
+    "victory": {
+      "type": "number"
+    },
+    "bronze": {
+      "type": "number"
+    },
+    "silver": {
+      "type": "number"
+    },
+    "gold": {
+      "type": "number"
+    }
+  }
 }

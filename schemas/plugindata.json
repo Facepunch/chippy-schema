@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/plugindata.json",
+  "title": "SpaceUsurper.PluginData",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "leaderboardIndex": {
+      "$ref": "/chippy-schema/schemas/byte.json"
+    },
+    "description": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "previewImage": {
+      "type": "string"
+    },
+    "difficulty": {
+      "$ref": "/chippy-schema/schemas/campaigndifficulty.json"
+    },
+    "sounds": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<SpaceUsurper.SfxManifestData>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/sfxmanifestdata.json"
+          },
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "strings": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<SpaceUsurper.RawJsonData>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/rawjsondata.json"
+          },
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    },
+    "title": {
+      "$ref": "/chippy-schema/schemas/localizedstring.json"
+    },
+    "nexRankingId": {
+      "$ref": "/chippy-schema/schemas/nexrankingid.json"
+    },
+    "disableCampaignLeaderboard": {
+      "type": "boolean"
+    },
+    "enableFlags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "category": {
+      "type": "string"
+    },
+    "hideInEditor": {
+      "type": "boolean"
+    },
+    "invisibleWhenLocked": {
+      "type": "boolean"
+    },
+    "backColor": {
+      "description": "Background tint in the main menu for this campaign. Default: #2A2A72",
+      "allOf": [
+        {
+          "anyOf": [
+            {
+              "$ref": "/chippy-schema/schemas/color.json"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      ]
+    },
+    "subtitleColor": {
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/color.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/campaignstagedata.json"
+      }
+    },
+    "#include": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "precacheTextures": {
+      "type": "array",
+      "items": {
+        "title": "DataPath<UnityEngine.Texture2D>",
+        "anyOf": [
+          {
+            "$ref": "/chippy-schema/schemas/datapath.json"
+          }
+        ]
+      }
+    }
+  },
+  "patternProperties": {
+    "[bB]ullet$": {
+      "$ref": "/chippy-schema/schemas/bulletdata.json"
+    },
+    "[pP]attern$": {
+      "$ref": "/chippy-schema/schemas/patterndata.json"
+    }
+  }
+}

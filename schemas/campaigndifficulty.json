@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/campaigndifficulty.json",
+  "title": "SpaceUsurper.CampaignDifficulty",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "NotSpecified",
+    "Easy",
+    "Normal",
+    "Hard",
+    "Insane"
+  ]
+}

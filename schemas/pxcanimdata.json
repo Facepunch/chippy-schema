@@ -1,22 +1,10 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/chippy-schema/schemas/subroutinedata.json",
-  "title": "SpaceUsurper.SubroutineData",
+  "$id": "/chippy-schema/schemas/pxcanimdata.json",
+  "title": "SpaceUsurper.PxcAnimData",
   "description": "",
   "type": "object",
   "properties": {
-    "parameters": {
-      "title": "Dictionary<string, SpaceUsurper.PropertyData>",
-      "type": "object",
-      "patternProperties": {
-        ".*": {
-          "$ref": "/chippy-schema/schemas/propertydata.json"
-        }
-      }
-    },
-    "actions": {
-      "$ref": "/chippy-schema/schemas/actionlist.json"
-    },
     "#include": {
       "type": "array",
       "items": {
@@ -33,6 +21,24 @@
           }
         ]
       }
+    },
+    "compressed": {
+      "$ref": "/chippy-schema/schemas/pxcanimdatacompressed.json"
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "$ref": "/chippy-schema/schemas/pxcframedata.json"
+      }
+    },
+    "loopMode": {
+      "$ref": "/chippy-schema/schemas/loopmode.json"
+    },
+    "animTime": {
+      "type": "number"
+    },
+    "easingType": {
+      "$ref": "/chippy-schema/schemas/easingtype.json"
     }
   },
   "patternProperties": {

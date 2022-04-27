@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/cameramode.json",
+  "title": "SpaceUsurper.CameraMode",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Default",
+    "ForceSingleCamera",
+    "SingleCameraWholeStage"
+  ]
+}

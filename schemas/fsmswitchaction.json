@@ -2,48 +2,5 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/fsmswitchaction.json",
   "title": "SpaceUsurper.FsmSwitchAction",
-  "description": "",
-  "type": "object",
-  "properties": {
-    "action": {
-      "type": "string",
-      "enum": [
-        "Switch"
-      ]
-    },
-    "value": {
-      "title": "FsmValue<System.Int32>",
-      "anyOf": [
-        {
-          "type": "integer"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        }
-      ]
-    },
-    "cases": {
-      "title": "Dictionary<string, System.Collections.Generic.List<SpaceUsurper.FsmAction>>",
-      "type": "object",
-      "patternProperties": {
-        ".*": {
-          "type": "array",
-          "items": {
-            "$ref": "/chippy-schema/schemas/fsmaction.json"
-          }
-        }
-      }
-    }
-  },
-  "required": [
-    "action"
-  ],
-  "patternProperties": {
-    "\\.sub$": {
-      "$ref": "/chippy-schema/schemas/subroutinedata.json"
-    },
-    "[fF]sm$": {
-      "$ref": "/chippy-schema/schemas/fsmdata.json"
-    }
-  }
+  "description": ""
 }

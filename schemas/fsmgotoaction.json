@@ -2,36 +2,5 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/fsmgotoaction.json",
   "title": "SpaceUsurper.FsmGotoAction",
-  "description": "",
-  "type": "object",
-  "properties": {
-    "action": {
-      "type": "string",
-      "enum": [
-        "Goto"
-      ]
-    },
-    "state": {
-      "title": "FsmValue<System.String>",
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
-        }
-      ]
-    }
-  },
-  "required": [
-    "action"
-  ],
-  "patternProperties": {
-    "\\.sub$": {
-      "$ref": "/chippy-schema/schemas/subroutinedata.json"
-    },
-    "[fF]sm$": {
-      "$ref": "/chippy-schema/schemas/fsmdata.json"
-    }
-  }
+  "description": ""
 }

@@ -2,5 +2,36 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "/chippy-schema/schemas/unitanimdata.json",
   "title": "SpaceUsurper.UnitAnimData",
-  "description": ""
+  "description": "",
+  "type": "object",
+  "properties": {
+    "time": {
+      "title": "ScriptFunc<System.Single>",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/iscriptfunc.json"
+        }
+      ]
+    },
+    "easingType": {
+      "$ref": "/chippy-schema/schemas/easingtype.json"
+    },
+    "next": {
+      "type": "string"
+    },
+    "path": {
+      "title": "DataPath<SpaceUsurper.PxcAnimData>",
+      "anyOf": [
+        {
+          "$ref": "/chippy-schema/schemas/pxcanimdata.json"
+        },
+        {
+          "$ref": "/chippy-schema/schemas/datapath.json"
+        }
+      ]
+    }
+  }
 }

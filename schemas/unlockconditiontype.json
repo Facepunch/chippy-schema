@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "/chippy-schema/schemas/unlockconditiontype.json",
+  "title": "SpaceUsurper.UnlockConditionType",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "All",
+    "Any",
+    "Always",
+    "StageUnlocked",
+    "StageCompleted",
+    "StageMedal",
+    "ProgressionFlag",
+    "Statistic"
+  ]
+}
